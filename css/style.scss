@@ -1,0 +1,167 @@
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/*------------------------End Of Normalise --------*/
+
+@import url(http://fonts.googleapis.com/css?family=Economica|Fira+Mono|Oxygen+Mono|Open+Sans|Open+Sans+Condensed:300);
+
+$background-color: #35383C;
+$gold: #B2854C;
+
+
+body{
+	margin: 0;
+	font-family: 'Open Sans';
+	background-color: $background-color;
+	margin-top: 1em;
+	transition: padding-top 0.4s ease;
+}
+
+
+
+header{
+	background: $background-color;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.icon-button{
+		background-image: url("img/B.png") ;
+		background-size: 100% 100%;
+		height: 50px;
+		width: 50px;
+		-webkit-transform: scale(0.8);
+	}
+}
+
+/* fix bootstrap and flex not working well together */
+header .container:before,
+header .container:after{ content: normal; }
+
+.container{
+	display: flex;
+}
+
+#icon-user:before{
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	font-size: 2.5em; 
+	
+}
+
+.title{
+	display: flex;
+	flex-direction: column;
+	height: 500px;  /* Remove this once content in page */
+
+	#name1{
+	font-family: 'Economica';
+	font-size: 3em;
+	color: $gold;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	}
+
+	#name2{
+		font-family: 'Open Sans';
+		font-size: 2.5em;
+		text-align: center;
+		color: white;
+		-webkit-font-smoothing: antialiased;
+
+	}
+
+}
+
+#topmenu{
+	font-size: 1.5em;
+	color: white;
+	font-family: 'Economica';
+	text-decoration: none;
+	list-style: none;
+
+	position: absolute;
+	top: -308px;
+	left: 0;
+	width: 100%;
+	transition: top 0.4s ease;
+	background: white;
+	text-align: center;
+
+
+	ul{
+		text-decoration: none;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li{
+			border-bottom: 1px dotted $background-color;
+			text-align: center;
+			line-height: 2;
+		}
+
+	}
+
+
+
+	a{
+		color: $background-color;
+		text-decoration: none;
+		list-style: none;
+		text-align: center;
+
+
+	
+	}
+
+	p{
+		color: $gold;
+	}
+
+	/*
+		State of the page with the activated topmenu
+	*/
+
+}
+
+body.show_topmenu{
+	padding-top: 308px;
+}
+
+body.show_topmenu #topmenu{
+	top: 0;
+}
+
+
+/*------------------------------------------- Footer -------------------------------------------*/
+footer{
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+	height: 50px;
+	margin-bottom: 0px;
+
+	.footer-pic{
+		background-image: url("img/logo-gold.png");
+		background-size: 100% 100%;
+		height: 40px;
+		width: 40px;
+		-webkit-transform: scale(0.8);
+		margin: 5px 10px 0 10px;
+	}
+
+	.logo>p{
+		font-family: 'Economica';
+		color: $gold;
+		font-size: 3em;
+		margin-top: 0;
+		padding-bottom: 10px;
+	}
+}
+
