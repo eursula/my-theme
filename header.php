@@ -12,13 +12,26 @@
 	
 	<header>
 		<div class="container">
+			<div class="main-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			</div>
+			<div data-icon="&#xe1cf;"  id="icon-hamburger" class="open3"></div>
+			<a href="#">
+				<div class="icon-button" id="open1"></div>
+			</a>
+			<div data-icon="&#xe070;"  id="icon-user" class="open2"></div>
+		</div>
+		<div class="media-menus">
 			<div id="topmenu">
 				<p>Welcome to Beauty Boutique</p>
-				<?php wp_nav_menu(); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
 			</div>
-			<a href="#">
-				<div class="icon-button" id="open"></div>
-			</a>
-			<div data-icon="&#xe070;"  id="icon-user"></div>	
+			<div id="usermenu">
+				<p>Log in or register with us</p>
+				<?php wp_nav_menu( array( 'theme_location' => 'user-menu' ) ); ?>
+			</div>
+			<div id="sidemenu">
+				<?php wp_nav_menu( array( 'theme_location' => 'side-menu' ) ); ?>
+			</div>
 		</div>
 	</header>

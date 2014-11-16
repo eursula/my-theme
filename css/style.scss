@@ -33,9 +33,13 @@ header .container{
 	.icon-button{
 		background-image: url("img/B.png") ;
 		background-size: 100% 100%;
-		height: 50px;
-		width: 50px;
-		-webkit-transform: scale(0.8);
+		height: 45px;
+		width: 45px;
+
+		@media screen and (min-width: 600px){
+			display: none;
+		} 
+		
 	}
 }
 
@@ -45,14 +49,255 @@ header .container:after{ content: normal; }
 
 .container{
 	display: flex;
+	max-width: 960px;
+
 }
 
-#icon-user:before{
+#icon-user:before,
+#icon-hamburger:before{
 	color: white;
 	-webkit-font-smoothing: antialiased;
-	font-size: 2.5em; 
-	
+	font-size: 2.5em;
 }
+
+#icon-hamburger:before{
+	color: $gold;
+	@media screen and (min-width: 600px){
+		display: none;
+	} 
+}
+
+.container .main-menu{
+	@media screen and (max-width: 600px){
+		display: none;
+	}
+
+	@media screen and (min-width: 600px){
+		display: none;
+		width: 800px;
+		display: flex;
+		justify-content: space-between;
+
+		ul{
+			text-decoration: none;
+			list-style: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+
+		ul li{
+			display: inline-block;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		li{
+			background-color: $gold;
+			margin-bottom: 0;
+			text-align: center;
+			line-height: 2;
+			color: white;
+			margin-bottom: 0;
+		}
+
+		a{
+			text-decoration: none;
+			list-style: none;
+			text-align: center;
+			color: white;
+			font-size: 1.5em;
+			padding: 1em;
+			padding-bottom: 0;
+		
+		}
+
+		.sub-menu li{
+			display: block;
+		}
+	}
+}
+
+	ul{
+		//display: none;
+		position: absolute;
+
+		a{
+			display: block;
+			color: blue;
+		}
+	}
+
+
+li:hover ul{
+	display: block;
+	color: blue;
+}
+
+.main-menu{
+	li{
+		padding-bottom: 0;
+	}
+
+	ul ul{
+		background-color: white;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	ul ul li a{
+		color: blue;
+	}
+}
+
+li ul{
+	padding: 0;
+	margin: 0;
+
+}
+
+
+#topmenu,
+#sidemenu,
+#usermenu{
+	font-size: 1.5em;
+	color: white;
+	font-family: 'Economica';
+	text-decoration: none;
+	list-style: none;
+
+	li{
+		border-bottom: 1px dotted $background-color;
+		text-align: center;
+		line-height: 2;
+	}
+
+	a{
+		color: $gold;
+	}
+
+	a:hover{
+		color: $gold;
+	}
+
+	p{
+		color: $gold;
+	}
+}
+
+#topmenu{
+	position: absolute;
+	top: -264px;
+	left: 0;
+	width: 100%;
+	transition: top 0.4s ease;
+	background: white;
+	text-align: center;
+}
+
+
+#usermenu{
+	position: absolute;
+	top: -179px;
+	left: 0;
+	width: 100%;
+	transition: top 0.4s ease;
+	background: $gold;
+	text-align: center;
+
+
+	ul{
+		text-decoration: none;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li{
+			border-bottom: 1px dotted white;
+			text-align: center;
+			line-height: 2;
+		}
+
+	}
+
+	a{
+		color: white;
+	}
+
+	a:hover{
+		color: $background-color;
+	}
+
+	p{
+		color: $background-color;
+	}
+}
+
+#sidemenu{
+	position: absolute;
+	left: -300px;
+	top: 0;
+	width:160px;
+	transition: left 0.4s ease;
+	background: white;
+	text-align: center;
+
+
+	ul{
+		text-decoration: none;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li{
+			border-bottom: 1px dotted white;
+			text-align: center;
+			line-height: 2;
+		}
+
+	}
+
+	a{
+		color: $gold;
+	}
+
+	a:hover{
+		color: $background-color;
+	}
+
+	p{
+		color: $background-color;
+	}
+}
+/*
+	State of the page with the activated topmenu	
+*/
+
+
+body.show_topmenu{
+	padding-top: 264px;
+}
+
+body.show_topmenu #topmenu{
+	top: 0;
+}
+
+body.show_usermenu{
+	padding-top: 179px;
+}
+
+body.show_usermenu #usermenu{
+	top: 0;
+}
+
+body.show_sidemenu{
+	margin-left: 150px;
+}
+
+body.show_sidemenu #sidemenu{
+	left: 0;
+	right: -260px;
+}
+/*---------------------------- Page with name -------------------------------------------*/
 
 .title{
 	display: flex;
@@ -76,66 +321,6 @@ header .container:after{ content: normal; }
 
 	}
 
-}
-
-#topmenu{
-	font-size: 1.5em;
-	color: white;
-	font-family: 'Economica';
-	text-decoration: none;
-	list-style: none;
-
-	position: absolute;
-	top: -308px;
-	left: 0;
-	width: 100%;
-	transition: top 0.4s ease;
-	background: white;
-	text-align: center;
-
-
-	ul{
-		text-decoration: none;
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-
-		li{
-			border-bottom: 1px dotted $background-color;
-			text-align: center;
-			line-height: 2;
-		}
-
-	}
-
-
-
-	a{
-		color: $background-color;
-		text-decoration: none;
-		list-style: none;
-		text-align: center;
-
-
-	
-	}
-
-	p{
-		color: $gold;
-	}
-
-	/*
-		State of the page with the activated topmenu
-	*/
-
-}
-
-body.show_topmenu{
-	padding-top: 308px;
-}
-
-body.show_topmenu #topmenu{
-	top: 0;
 }
 
 

@@ -3,9 +3,23 @@
 # Template Directory
 $dir = get_template_directory_uri();
 
-register_nav_menu('main', 'Main nav bar');
+//register_nav_menu('main', 'Main nav bar');
 
-//register_top_menu('top', 'Top nav bar');
+//register_nav_menu('topmenu', 'Top Menu');
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Main nav bar' ),
+      'top-menu' => __( 'Top Menu' ),
+      'side-menu' => __( 'Side Menu' ),
+      'user-menu' => __( 'User Menu' ),
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
+add_action('header_menu', 'register_my_custom_submenu_page');
 
 add_editor_style('editor-style.css');
 
