@@ -13,8 +13,9 @@ body{
 	margin: 0;
 	font-family: 'Open Sans';
 	background-color: $background-color;
-	margin-top: 1em;
 	transition: padding-top 0.4s ease;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 
@@ -78,13 +79,6 @@ header .container:after{ content: normal; }
 		display: flex;
 		justify-content: space-between;
 
-		ul{
-			text-decoration: none;
-			list-style: none;
-			margin-left: 0;
-			padding-left: 0;
-		}
-
 		ul li{
 			display: inline-block;
 			margin-bottom: 0;
@@ -92,67 +86,64 @@ header .container:after{ content: normal; }
 		}
 
 		li{
-			background-color: $gold;
+			border: 1px solid white;
 			margin-bottom: 0;
-			text-align: center;
-			line-height: 2;
-			color: white;
-			margin-bottom: 0;
+			width: 132px;
 		}
 
 		a{
-			text-decoration: none;
-			list-style: none;
-			text-align: center;
 			color: white;
 			font-size: 1.5em;
-			padding: 1em;
+			margin: 1em;
 			padding-bottom: 0;
 		
 		}
 
 		.sub-menu li{
 			display: block;
-		}
-	}
-}
-
-	ul{
-		//display: none;
-		position: absolute;
-
-		a{
-			display: block;
 			color: blue;
 		}
 	}
-
-
-li:hover ul{
-	display: block;
-	color: blue;
 }
 
-.main-menu{
+ul{
+	text-decoration: none;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+
 	li{
-		padding-bottom: 0;
+		text-align: center;
+		line-height: 2;
+		color: white;
+		margin-bottom: 0;
+
 	}
 
-	ul ul{
-		background-color: white;
+	a{
+		text-decoration: none;
+		list-style: none;
+		text-align: center;
+		
+	}
+
+	ul{
+		display: none;
+		position: absolute;
 		margin-top: 0;
 		padding-top: 0;
+		
 	}
 
-	ul ul li a{
+	li:hover ul{
+		display: block;
 		color: blue;
+
+
+		a{
+			width: 150px;
+		}
 	}
-}
-
-li ul{
-	padding: 0;
-	margin: 0;
-
 }
 
 
@@ -186,7 +177,7 @@ li ul{
 
 #topmenu{
 	position: absolute;
-	top: -264px;
+	top: -265px;
 	left: 0;
 	width: 100%;
 	transition: top 0.4s ease;
@@ -197,7 +188,7 @@ li ul{
 
 #usermenu{
 	position: absolute;
-	top: -179px;
+	bottom: 100%;
 	left: 0;
 	width: 100%;
 	transition: top 0.4s ease;
@@ -233,10 +224,11 @@ li ul{
 }
 
 #sidemenu{
+	$width: 160px;
 	position: absolute;
-	left: -300px;
+	left: -$width;
 	top: 0;
-	width:160px;
+	width: $width;
 	transition: left 0.4s ease;
 	background: white;
 	text-align: center;
@@ -268,34 +260,36 @@ li ul{
 		color: $background-color;
 	}
 }
+
+.pusher{
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+
+	padding-top: 1em;
+}
 /*
 	State of the page with the activated topmenu	
 */
 
 
 body.show_topmenu{
-	padding-top: 264px;
+	padding-top: 265px;
 }
 
 body.show_topmenu #topmenu{
 	top: 0;
 }
 
-body.show_usermenu{
-	padding-top: 179px;
+body.show_usermenu .pusher{
+	transform: translate3d(0,179px,0);
 }
 
-body.show_usermenu #usermenu{
-	top: 0;
-}
-
-body.show_sidemenu{
-	margin-left: 150px;
-}
-
-body.show_sidemenu #sidemenu{
-	left: 0;
-	right: -260px;
+body.show_sidemenu .pusher{
+	// margin-left: 150px;
+	transform: translate3d(150px,0,0);
 }
 /*---------------------------- Page with name -------------------------------------------*/
 
