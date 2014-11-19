@@ -30,9 +30,9 @@
 				<div class="main-menu">
 					<?php wp_nav_menu('header-menu'); ?>
 				</div>
-				<div data-icon="&#xe1cf;"  id="icon-hamburger" class="open1"></div>
+				<div data-icon="&#xe0b8;"  id="icon-hamburger" class="open1"></div>
 				<a href="#">
-					<div class="icon-button" class="open2"></div>
+					<div class="icon-button" id="open2"></div>
 				</a>
 				<div data-icon="&#xe070;"  id="icon-user" class="open3"></div>
 			</div>

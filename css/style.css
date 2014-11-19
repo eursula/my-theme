@@ -299,10 +299,12 @@ ul {
     list-style: none;
     text-align: center; }
   ul ul {
-    display: none;
     position: absolute;
     margin-top: 0;
     padding-top: 0; }
+    @media screen and (min-width: 600px) {
+      ul ul {
+        display: none; } }
   ul li:hover ul {
     display: block;
     color: blue; }
@@ -373,13 +375,14 @@ ul {
 
 #sidemenu {
   position: absolute;
-  left: -160px;
+  left: -170px;
   top: 0;
-  width: 160px;
+  width: 170px;
   -webkit-transition: left 0.4s ease;
   transition: left 0.4s ease;
   background: white;
-  text-align: center; }
+  text-align: center;
+  height: 90vh; }
   #sidemenu ul {
     text-decoration: none;
     list-style: none;
@@ -387,8 +390,10 @@ ul {
     padding-left: 0; }
     #sidemenu ul li {
       border-bottom: 1px dotted white;
-      text-align: center;
-      line-height: 2; }
+      text-align: left;
+      padding-left: 1.5em;
+      line-height: 2;
+      font-size: 1.1em; }
   #sidemenu a {
     color: #b2854c; }
   #sidemenu a:hover {
@@ -415,8 +420,8 @@ body.show_usermenu .pusher {
   transform: translate3d(0, 179px, 0); }
 
 body.show_sidemenu .pusher {
-  -webkit-transform: translate3d(150px, 0, 0);
-  transform: translate3d(150px, 0, 0); }
+  -webkit-transform: translate3d(170px, 0, 0);
+  transform: translate3d(170px, 0, 0); }
 
 /*---------------------------- Page with name -------------------------------------------*/
 .title {
@@ -429,20 +434,53 @@ body.show_sidemenu .pusher {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 500px;
-  /* Remove this once content in page */ }
+  margin-top: 80px;
+  min-height: 500px;
+  /* Remove this once content in page */
+  text-align: center; }
   .title #name1 {
     font-family: 'Economica';
     font-size: 3em;
     color: #b2854c;
     text-align: center;
-    -webkit-font-smoothing: antialiased; }
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 10px;
+    margin-bottom: 0; }
   .title #name2 {
     font-family: 'Open Sans';
     font-size: 2.5em;
     text-align: center;
     color: white;
-    -webkit-font-smoothing: antialiased; }
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 5px;
+    margin-top: 0; }
+
+.main-pic {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .main-pic #x-pic {
+    background-image: url("img/logo-gold.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 40px;
+    width: 40px;
+    -webkit-transform: scale(0.8); }
+  .main-pic .face-pic {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: 10px;
+    height: 180px;
+    width: 400px;
+    background-color: white;
+    -webkit-transform: scale(0.8); }
+    .main-pic .face-pic img {
+      height: 200px; }
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer {
