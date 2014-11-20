@@ -471,16 +471,38 @@ body.show_sidemenu .pusher {
     height: 40px;
     width: 40px;
     -webkit-transform: scale(0.8); }
-  .main-pic .face-pic {
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-    margin: 10px;
-    height: 180px;
-    width: 400px;
-    background-color: white;
-    -webkit-transform: scale(0.8); }
-    .main-pic .face-pic img {
-      height: 200px; }
+
+.face-pic img {
+  margin-top: 60px;
+  width: 95vw;
+  padding: 5px;
+  background-color: white; }
+
+.promotion-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 10px;
+  border: 5px solid #b2854c; }
+  .promotion-box img {
+    width: 20px;
+    height: 20px; }
+  .promotion-box p {
+    color: #b2854c;
+    font-family: 'Open Sans';
+    font-size: 2.3em;
+    text-align: justify;
+    padding: 10px; }
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer {

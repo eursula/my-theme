@@ -1,4 +1,4 @@
-<?php /* Template Name: Page with Name */ ?>
+<?php /* Template Name: Promotion */ ?>
 
 <?php get_header(); ?>
 	<div class="title">
@@ -11,11 +11,8 @@
 			<img src="wp-content/themes/my-theme/css/img/beauty-large.png" alt="">
 		</div>
 	</div>
+ 
+?>
 	
-	<div class="promotion-box">
-		<?php echo types_render_field('promotion_icon', ['output' => 'html']); ?>
-
-		<?php echo types_render_field('promotion_box', ['output' => 'html']); ?>
-	</div>
-
+	
 <?php get_footer(); ?>
