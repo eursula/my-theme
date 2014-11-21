@@ -17,11 +17,24 @@ function register_my_menus() {
     )
   );
 }
+
 add_action( 'init', 'register_my_menus' );
 
 add_action('header_menu', 'register_my_custom_submenu_page');
 
 add_editor_style('editor-style.css');
+
+function my_image_tag() {
+	global $wpdb;
+	global $post;
+	$my_post_image = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_parent= $post->ID and post_type = 'attachment'");
+	if ($my_post_image == 0) {
+	echo "";
+	}
+	else {
+	echo wp_get_attachment_image($my_post_image, $size='large', $icon = false);
+	}
+}
 
 if(!is_admin()){
 
@@ -64,3 +77,4 @@ if(!is_admin()){
 	wp_enqueue_style('theme', $dir.'/css/style.css');
 
 }
+

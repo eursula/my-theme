@@ -11,6 +11,7 @@ $gold: #B2854C;
 
 body{
 	margin: 0;
+	margin: 0 auto;
 	font-family: 'Open Sans';
 	background-color: $background-color;
 	transition: padding-top 0.4s ease;
@@ -28,6 +29,7 @@ header{
 }
 
 header .container{
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -50,6 +52,7 @@ header .container:before,
 header .container:after{ content: normal; }
 
 .container{
+	margin: 0 auto;
 	display: flex;
 	max-width: 960px;
 
@@ -381,9 +384,74 @@ body.show_sidemenu .pusher{
 	}
 }	
 
+/*---------------------------- Page display treatments --------------------------------*/
 
+h2{
+	color: white;
+	font-size: 2em;
+}
 
+.page-title{
+	flex-direction: row;
+}
 
+.flex-row{
+	//@media screen and (max-width: 600px){
+	flex-wrap: wrap;
+	//}
+}
+
+.tr-name{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.tr-name h2{
+	@media screen and (max-width: 600px){
+		font-size: 2.5em;
+	}
+
+	z-index: 2;
+	font-size: 3em;
+
+}
+
+.tr-image img{
+	width: 100%;
+}
+
+.treatments{
+	@media screen and (max-width: 600px){
+		justify-content: space-between;
+	}
+
+	a{
+		position: relative;
+		display: block;
+		padding: 10px;
+	}
+
+	a:hover{
+		position: relative;
+		display: block;
+		opacity:1;
+    	background:
+	    linear-gradient(
+	        rgba(1, 0, 0, 0.6), 
+      		rgba(1, 0, 0, 0.6)
+	    );
+		//filter:alpha(opacity=90);
+		//transform: scale(1.1,1.1);
+	}
+
+	#image-w{
+		max-width: 450px;
+	}
+
+}
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer{
@@ -411,3 +479,22 @@ footer{
 	}
 }
 
+
+/*----------------------------------- Flexbox ---------------------------------------*/
+
+.flex{ display: flex; }
+.flex-1{ flex: 1; }
+.flex-2{ flex: 2; }
+.flex-3{ flex: 3; }
+.flex-column{ flex-direction: column; }
+.flex-row{ flex-direction: row; }
+.flex-j-start{ justify-content: flex-start; }
+.flex-j-end{ justify-content: flex-end; }
+.flex-j-center{ justify-content: center; }
+.flex-j-between{ justify-content: space-between; }
+.flex-j-around{ justify-content: space-around; }
+.flex-a-start{ align-items: flex-start; }
+.flex-a-end{ align-items: flex-end; }
+.flex-a-center{ align-items: center; }
+.flex-a-stretch{ align-items: stretch; }
+.flex-wrap{ flex-wrap: wrap; }
