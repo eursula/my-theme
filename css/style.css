@@ -229,9 +229,6 @@ header .container {
       header .container .icon-button {
         display: none; } }
 
-a:hover {
-  text-decoration: none; }
-
 /* fix bootstrap and flex not working well together */
 header .container:before,
 header .container:after {
@@ -300,13 +297,16 @@ header .container:after {
       text-decoration: none; }
     .container .main-menu .submenu {
       display: block;
-      border-style: solid;
-      border-width: 0px 20px 20px 20px;
-      height: 0px;
-      width: 0px; }
+      border-style: solid; } }
+    @media screen and (min-width: 600px) and (max-width: 600px) {
+      .container .main-menu .submenu {
+        height: 300px; } }
+@media screen and (min-width: 600px) {
     .container .main-menu .sub-menu li {
-      display: block; }
+      display: block; } }
+    @media screen and (min-width: 600px) and (min-width: 600px) {
       .container .main-menu .sub-menu li a:hover {
+        border-bottom: none;
         text-decoration: none; } }
 
 ul {
@@ -332,12 +332,15 @@ ul {
     @media screen and (min-width: 600px) {
       ul ul {
         display: none; } }
-  ul li:hover ul {
-    display: block; }
-    ul li:hover ul a {
-      width: 150px; }
+  @media screen and (min-width: 600px) {
+    ul li:hover ul {
+      display: block; } }
+  ul li:hover ul a {
+    width: 150px; }
 
 .header-logo {
+  cursor: pointer;
+  target: 'index.php/home';
   -webkit-transform: scale(1.1); }
   .header-logo #logo1 {
     font-family: 'Economica';
@@ -459,9 +462,9 @@ ul {
 
 #sidemenu {
   position: absolute;
-  left: -170px;
+  left: -200px;
   top: 0;
-  width: 170px;
+  width: 200px;
   -webkit-transition: left 0.4s ease;
   transition: left 0.4s ease;
   background: white;
@@ -504,8 +507,8 @@ body.show_usermenu .pusher {
   transform: translate3d(0, 179px, 0); }
 
 body.show_sidemenu .pusher {
-  -webkit-transform: translate3d(170px, 0, 0);
-  transform: translate3d(170px, 0, 0); }
+  -webkit-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0); }
 
 /*---------------------------- Page with name -------------------------------------------*/
 .title {
@@ -518,6 +521,7 @@ body.show_sidemenu .pusher {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-top: 80px;
   text-align: center; }
   @media screen and (min-width: 600px) {
     .title {
@@ -608,7 +612,8 @@ h2 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-left: 10px; }
 
 .flex-row {
   -webkit-flex-wrap: wrap;

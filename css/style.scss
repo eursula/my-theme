@@ -44,10 +44,6 @@ header .container{
 	}
 }
 
-a:hover{
-	text-decoration: none;
-}
-
 /* fix bootstrap and flex not working well together */
 header .container:before,
 header .container:after{ content: normal; }
@@ -89,6 +85,7 @@ header .container:after{ content: normal; }
 
 	@media screen and (min-width: 600px){
 		display: none;
+		//width: 800px;
 		display: flex;
 		justify-content: space-between;
 
@@ -124,16 +121,23 @@ header .container:after{ content: normal; }
 		.submenu{
 			display: block;
 			border-style: solid;
-			border-width: 0px 20px 20px 20px;
-			height: 0px;
-			width: 0px;
+			@media screen and (max-width: 600px){
+				height: 300px;
+			}
+			//border-width: 0px 20px 20px 20px;
+			//height: 0px;
+			//width: 0px;
 
 		}
 		.sub-menu li{
 			display: block;
 
-			a:hover{
-				text-decoration: none;
+			
+			@media screen and (min-width: 600px){
+				a:hover{
+					border-bottom: none;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -166,6 +170,7 @@ ul{
 		padding-top: 0;
 		z-index: 1;
 		background-color: white;
+
 		@media screen and (min-width: 600px){
 			display: none;
 		}
@@ -173,16 +178,21 @@ ul{
 	}
 
 	li:hover ul{
-		display: block;
 
+		@media screen and (min-width: 600px){
+			display: block;
+
+		}
 
 		a{
 			width: 150px;
 		}
 	}
 }
-.header-logo{
 
+.header-logo{
+	cursor: pointer;
+	target: 'index.php/home';
 	-webkit-transform: scale(1.1);
 
 	#logo1{
@@ -330,7 +340,7 @@ ul{
 
 
 #sidemenu{
-	$width: 170px;
+	$width: 200px;
 	position: absolute;
 	left: -$width;
 	top: 0;
@@ -401,7 +411,7 @@ body.show_usermenu .pusher{
 
 body.show_sidemenu .pusher{
 	// margin-left: 150px;
-	transform: translate3d(170px,0,0);
+	transform: translate3d(200px,0,0);
 
 }
 /*---------------------------- Page with name -------------------------------------------*/
@@ -409,7 +419,7 @@ body.show_sidemenu .pusher{
 .title{
 	display: flex;
 	flex-direction: column;
-	//margin-top: 80px;
+	margin-top: 80px;
 	//min-height: 500px;  /* Remove this once content in page */
 	text-align: center;
 
@@ -507,6 +517,7 @@ h2{
 
 .page-title{
 	flex-direction: row;
+	padding-left: 10px;
 }
 
 .flex-row{
