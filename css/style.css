@@ -195,19 +195,18 @@ body {
   margin: 0;
   margin: 0 auto;
   font-family: 'Open Sans';
-  background-color: #35383c;
+  background-color: #373737;
   -webkit-transition: padding-top 0.4s ease;
   transition: padding-top 0.4s ease;
   overflow-y: scroll;
   overflow-x: hidden; }
 
 header {
-  background: #35383c;
+  background: #373737;
   color: #fff;
   -webkit-font-smoothing: antialiased; }
 
 header .container {
-  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,6 +229,9 @@ header .container {
       header .container .icon-button {
         display: none; } }
 
+a:hover {
+  text-decoration: none; }
+
 /* fix bootstrap and flex not working well together */
 header .container:before,
 header .container:after {
@@ -237,6 +239,8 @@ header .container:after {
 
 .container {
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,9 +254,16 @@ header .container:after {
   font-size: 2.5em; }
 
 #icon-hamburger:before {
-  color: #b2854c; }
+  color: #b2854c;
+  margin-left: 5px; }
   @media screen and (min-width: 600px) {
     #icon-hamburger:before {
+      display: none; } }
+
+#icon-user:before {
+  margin-right: 5px; }
+  @media screen and (min-width: 600px) {
+    #icon-user:before {
       display: none; } }
 
 @media screen and (max-width: 600px) {
@@ -261,7 +272,6 @@ header .container:after {
 @media screen and (min-width: 600px) {
   .container .main-menu {
     display: none;
-    width: 800px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -275,17 +285,29 @@ header .container:after {
       margin-bottom: 0;
       padding-bottom: 0; }
     .container .main-menu li {
-      border: 1px solid white;
       margin-bottom: 0;
-      width: 132px; }
+      border-color: black transparent; }
+      .container .main-menu li li:hover {
+        background-color: #b2854c; }
     .container .main-menu a {
+      color: #b2854c;
+      font-size: 1.2em;
+      margin: .5em;
+      padding-bottom: 0;
+      font-weight: bold; }
+    .container .main-menu li a:hover {
       color: white;
-      font-size: 1.5em;
-      margin: 1em;
-      padding-bottom: 0; }
-    .container .main-menu .sub-menu li {
+      text-decoration: none; }
+    .container .main-menu .submenu {
       display: block;
-      color: blue; } }
+      border-style: solid;
+      border-width: 0px 20px 20px 20px;
+      height: 0px;
+      width: 0px; }
+    .container .main-menu .sub-menu li {
+      display: block; }
+      .container .main-menu .sub-menu li a:hover {
+        text-decoration: none; } }
 
 ul {
   text-decoration: none;
@@ -295,7 +317,7 @@ ul {
   ul li {
     text-align: center;
     line-height: 2;
-    color: white;
+    color: #b2854c;
     margin-bottom: 0; }
   ul a {
     text-decoration: none;
@@ -304,15 +326,55 @@ ul {
   ul ul {
     position: absolute;
     margin-top: 0;
-    padding-top: 0; }
+    padding-top: 0;
+    z-index: 1;
+    background-color: white; }
     @media screen and (min-width: 600px) {
       ul ul {
         display: none; } }
   ul li:hover ul {
-    display: block;
-    color: blue; }
+    display: block; }
     ul li:hover ul a {
       width: 150px; }
+
+.header-logo {
+  -webkit-transform: scale(1.1); }
+  .header-logo #logo1 {
+    font-family: 'Economica';
+    font-size: 2em;
+    color: #b2854c;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 5px;
+    margin-bottom: 0; }
+  .header-logo #logo2 {
+    font-family: 'Open Sans';
+    font-size: 1.7em;
+    text-align: center;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 2px;
+    margin-top: 0; }
+  .header-logo .main-pic {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .header-logo .main-pic #x-logopic {
+      background-image: url("img/logo-gold.png");
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+      height: 25px;
+      width: 25px;
+      -webkit-transform: scale(0.8);
+      margin-top: -10px; }
+  @media screen and (max-width: 600px) {
+    .header-logo {
+      display: none; } }
 
 #topmenu,
 #sidemenu,
@@ -325,7 +387,7 @@ ul {
   #topmenu li,
   #sidemenu li,
   #usermenu li {
-    border-bottom: 1px dotted #35383c;
+    border-bottom: 1px dotted #373737;
     text-align: center;
     line-height: 2; }
   #topmenu a,
@@ -366,15 +428,34 @@ ul {
     margin-left: 0;
     padding-left: 0; }
     #usermenu ul li {
-      border-bottom: 1px dotted white;
       text-align: center;
       line-height: 2; }
   #usermenu a {
     color: white; }
   #usermenu a:hover {
-    color: #35383c; }
+    color: #373737; }
   #usermenu p {
-    color: #35383c; }
+    color: #373737; }
+
+.login-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-left: 70px;
+  margin-right: 30px;
+  width: 110px; }
+  .login-menu #left {
+    padding-right: 15px;
+    border-right: 1px solid white; }
+  .login-menu a {
+    color: white; }
+  @media screen and (max-width: 600px) {
+    .login-menu {
+      display: none; } }
 
 #sidemenu {
   position: absolute;
@@ -400,9 +481,9 @@ ul {
   #sidemenu a {
     color: #b2854c; }
   #sidemenu a:hover {
-    color: #35383c; }
+    color: #373737; }
   #sidemenu p {
-    color: #35383c; }
+    color: #373737; }
 
 .pusher {
   -webkit-transition: all 0.2s ease;
@@ -437,10 +518,10 @@ body.show_sidemenu .pusher {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 80px;
-  min-height: 500px;
-  /* Remove this once content in page */
   text-align: center; }
+  @media screen and (min-width: 600px) {
+    .title {
+      margin-top: 50px; } }
   .title #name1 {
     font-family: 'Economica';
     font-size: 3em;
@@ -449,6 +530,9 @@ body.show_sidemenu .pusher {
     -webkit-font-smoothing: antialiased;
     letter-spacing: 10px;
     margin-bottom: 0; }
+    @media screen and (min-width: 600px) {
+      .title #name1 {
+        font-size: 5em; } }
   .title #name2 {
     font-family: 'Open Sans';
     font-size: 2.5em;
@@ -457,6 +541,9 @@ body.show_sidemenu .pusher {
     -webkit-font-smoothing: antialiased;
     letter-spacing: 5px;
     margin-top: 0; }
+    @media screen and (min-width: 600px) {
+      .title #name2 {
+        font-size: 4.5em; } }
 
 .main-pic {
   display: -webkit-box;
@@ -477,9 +564,13 @@ body.show_sidemenu .pusher {
 
 .face-pic img {
   margin-top: 60px;
-  width: 95vw;
+  width: 100vw;
   padding: 5px;
   background-color: white; }
+  @media screen and (min-width: 600px) {
+    .face-pic img {
+      width: 100%;
+      margin-top: 80px; } }
 
 .promotion-box {
   display: -webkit-box;
@@ -538,15 +629,17 @@ h2 {
     .tr-name h2 {
       font-size: 2.5em; } }
 
+.tr-image {
+  overflow: hidden; }
+
 .tr-image img {
   width: 100%; }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .treatments {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between; } }
+    padding: 10px; } }
+.treatments #image-w {
+  max-width: 450px; }
 .treatments a {
   position: relative;
   display: block;
@@ -558,8 +651,25 @@ h2 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 0, 0, 0.6)), to(rgba(1, 0, 0, 0.6)));
   background: -webkit-linear-gradient(rgba(1, 0, 0, 0.6), rgba(1, 0, 0, 0.6));
   background: linear-gradient(rgba(1, 0, 0, 0.6), rgba(1, 0, 0, 0.6)); }
-.treatments #image-w {
-  max-width: 450px; }
+
+/*------------------------------------------- Page w Banner -------------------------------------------*/
+.treatment-title {
+  margin-top: 40px;
+  font-size: 1em;
+  color: white;
+  padding-left: 10px;
+  letter-spacing: 2px; }
+  @media screen and (min-width: 600px) {
+    .treatment-title {
+      font-size: 1.2em; } }
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  margin-left: 0; }
+  @media screen and (max-width: 600px) {
+    .banner img {
+      height: 200px; } }
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer {
@@ -685,3 +795,10 @@ footer {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+.up-arrow {
+  border-color: black transparent;
+  border-style: solid;
+  border-width: 0px 10px 10px 10px;
+  height: 0px;
+  width: 0px; }

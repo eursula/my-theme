@@ -5,7 +5,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 @import url(http://fonts.googleapis.com/css?family=Economica|Fira+Mono|Oxygen+Mono|Open+Sans|Open+Sans+Condensed:300);
 
-$background-color: #35383C;
+$background-color: #373737;
 $gold: #B2854C;
 
 
@@ -19,8 +19,6 @@ body{
 	overflow-x: hidden;
 }
 
-
-
 header{
 	background: $background-color;
 	color: #fff;
@@ -29,7 +27,6 @@ header{
 }
 
 header .container{
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -47,15 +44,20 @@ header .container{
 	}
 }
 
+a:hover{
+	text-decoration: none;
+}
+
 /* fix bootstrap and flex not working well together */
 header .container:before,
 header .container:after{ content: normal; }
 
 .container{
 	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
 	display: flex;
 	max-width: 960px;
-
 }
 
 #icon-user:before,
@@ -67,8 +69,14 @@ header .container:after{ content: normal; }
 
 #icon-hamburger:before{
 	color: $gold;
-	//font-size: 2em;
-	//background-color: white;
+	margin-left: 5px;
+	@media screen and (min-width: 600px){
+		display: none;
+	} 
+}
+
+#icon-user:before{
+	margin-right: 5px;
 	@media screen and (min-width: 600px){
 		display: none;
 	} 
@@ -81,7 +89,6 @@ header .container:after{ content: normal; }
 
 	@media screen and (min-width: 600px){
 		display: none;
-		width: 800px;
 		display: flex;
 		justify-content: space-between;
 
@@ -92,22 +99,42 @@ header .container:after{ content: normal; }
 		}
 
 		li{
-			border: 1px solid white;
 			margin-bottom: 0;
-			width: 132px;
+			border-color: black transparent;
+
+
+			li:hover{
+				background-color: $gold;	
+			}
 		}
 
 		a{
-			color: white;
-			font-size: 1.5em;
-			margin: 1em;
+			color: $gold;
+			font-size: 1.2em;
+			margin: .5em;
 			padding-bottom: 0;
-		
+			font-weight: bold;
 		}
 
+		li a:hover{
+			color: white;
+			text-decoration: none;
+		}
+
+		.submenu{
+			display: block;
+			border-style: solid;
+			border-width: 0px 20px 20px 20px;
+			height: 0px;
+			width: 0px;
+
+		}
 		.sub-menu li{
 			display: block;
-			color: blue;
+
+			a:hover{
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -121,7 +148,7 @@ ul{
 	li{
 		text-align: center;
 		line-height: 2;
-		color: white;
+		color: $gold;
 		margin-bottom: 0;
 
 	}
@@ -137,19 +164,66 @@ ul{
 		position: absolute;
 		margin-top: 0;
 		padding-top: 0;
+		z-index: 1;
+		background-color: white;
 		@media screen and (min-width: 600px){
 			display: none;
 		}
+
 	}
 
 	li:hover ul{
 		display: block;
-		color: blue;
 
 
 		a{
 			width: 150px;
 		}
+	}
+}
+.header-logo{
+
+	-webkit-transform: scale(1.1);
+
+	#logo1{
+		font-family: 'Economica';
+		font-size: 2em;
+		color: $gold;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: 5px;
+		margin-bottom: 0;
+		
+	}
+
+	#logo2{
+		font-family: 'Open Sans';
+		font-size: 1.7em;
+		text-align: center;
+		color: white;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: 2px;
+		margin-top: 0;
+		
+
+	}
+
+	.main-pic{
+		display: flex;
+		justify-content: center;
+		
+
+		#x-logopic{
+			background-image: url("img/logo-gold.png");
+			background-size: 100% 100%;
+			height: 25px;
+			width: 25px;
+			-webkit-transform: scale(0.8);
+			margin-top: -10px;
+		}
+	}
+	@media screen and (max-width: 600px){
+		display: none;
 	}
 }
 
@@ -202,7 +276,7 @@ ul{
 	background: $gold;
 	text-align: center;
 
-
+	
 	ul{
 		text-decoration: none;
 		list-style: none;
@@ -210,7 +284,7 @@ ul{
 		padding-left: 0;
 
 		li{
-			border-bottom: 1px dotted white;
+			//border-bottom: 1px dotted white;
 			text-align: center;
 			line-height: 2;
 		}
@@ -226,6 +300,31 @@ ul{
 
 	p{
 		color: $background-color;
+	}
+}
+
+.login-menu{
+	display: flex;
+	justify-content: space-around;
+	margin-left: 70px;
+	margin-right: 30px;
+	width: 110px;
+	//background-color: $gold;
+
+
+	#left{
+		padding-right: 15px;
+		border-right: 1px solid white;
+	}
+
+
+	a{
+		//padding: 10px;
+		color: white;
+	}
+
+	@media screen and (max-width: 600px){
+		display: none;
 	}
 }
 
@@ -310,19 +409,28 @@ body.show_sidemenu .pusher{
 .title{
 	display: flex;
 	flex-direction: column;
-	margin-top: 80px;
-	min-height: 500px;  /* Remove this once content in page */
+	//margin-top: 80px;
+	//min-height: 500px;  /* Remove this once content in page */
 	text-align: center;
+
+	@media screen and (min-width: 600px){
+		margin-top: 50px;
+	}
 
 
 	#name1{
-	font-family: 'Economica';
-	font-size: 3em;
-	color: $gold;
-	text-align: center;
-	-webkit-font-smoothing: antialiased;
-	letter-spacing: 10px;
-	margin-bottom: 0;
+		font-family: 'Economica';
+		font-size: 3em;
+		color: $gold;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: 10px;
+		margin-bottom: 0;
+
+		@media screen and (min-width: 600px){
+			font-size: 5em;
+		}
+
 	}
 
 	#name2{
@@ -334,8 +442,10 @@ body.show_sidemenu .pusher{
 		letter-spacing: 5px;
 		margin-top: 0;
 
+		@media screen and (min-width: 600px){
+			font-size: 4.5em;
+		}
 	}
-
 }
 
 .main-pic{
@@ -354,9 +464,13 @@ body.show_sidemenu .pusher{
 
 .face-pic img{
 	margin-top: 60px;
-	width: 95vw;
+	width: 100vw;
 	padding: 5px;
 	background-color: white;
+	@media screen and (min-width: 600px){
+		width: 100%;
+		margin-top: 80px;
+	}
 }
 
 .promotion-box{
@@ -382,7 +496,7 @@ body.show_sidemenu .pusher{
 		padding: 10px;
 		
 	}
-}	
+}
 
 /*---------------------------- Page display treatments --------------------------------*/
 
@@ -419,13 +533,22 @@ h2{
 
 }
 
+.tr-image{
+	overflow: hidden;
+}
+
 .tr-image img{
 	width: 100%;
 }
 
 .treatments{
-	@media screen and (max-width: 600px){
-		justify-content: space-between;
+	@media screen and (min-width: 600px){
+		padding: 10px;
+	}
+
+	#image-w{
+		max-width: 450px;
+
 	}
 
 	a{
@@ -444,14 +567,38 @@ h2{
       		rgba(1, 0, 0, 0.6)
 	    );
 		//filter:alpha(opacity=90);
-		//transform: scale(1.1,1.1);
 	}
-
-	#image-w{
-		max-width: 450px;
-	}
-
 }
+/*------------------------------------------- Page w Banner -------------------------------------------*/
+
+.treatment-title{
+	margin-top: 40px;
+	font-size: 1em;
+	color: white;
+	padding-left: 10px;	
+	letter-spacing: 2px;
+
+	@media screen and (min-width: 600px){
+		font-size: 1.2em;
+		
+	}	
+}
+
+.banner{
+	//margin-top: 10px;
+
+	img{
+		width: 100%;
+		height: 300px;
+		margin-left: 0;
+
+		@media screen and (max-width: 600px){
+			height: 200px;
+		}
+	}
+}
+
+
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer{
@@ -498,3 +645,11 @@ footer{
 .flex-a-center{ align-items: center; }
 .flex-a-stretch{ align-items: stretch; }
 .flex-wrap{ flex-wrap: wrap; }
+
+.up-arrow {
+	border-color: black transparent;
+	border-style: solid;
+	border-width: 0px 10px 10px 10px;
+	height: 0px;
+	width: 0px;
+}
