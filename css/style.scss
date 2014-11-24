@@ -348,7 +348,7 @@ ul{
 	transition: left 0.4s ease;
 	background: white;
 	text-align: center;
-	height: 90vh;
+	height: 100vh;
 
 
 	ul{
@@ -512,12 +512,24 @@ body.show_sidemenu .pusher{
 
 h2{
 	color: white;
-	font-size: 2em;
+	font-size: 1.3em;
+	letter-spacing: 5px;
+
+	@media screen and (min-width: 600px){
+		font-size: 1.5em;
+		padding-left: 10px;
+	}
+
 }
 
 .page-title{
+	margin-top: 20px;
 	flex-direction: row;
-	padding-left: 10px;
+	text-align: center;
+
+	@media screen and (min-width: 600px){
+		text-align: left;
+	}
 }
 
 .flex-row{
@@ -608,6 +620,17 @@ h2{
 		}
 	}
 }
+
+/*---------------------------- Page display FAQs --------------------------------*/
+
+#verticleTab{
+	width: 100%;
+}
+.resp-tabs-container{
+	width: 100%;
+	margin-top: 50px;
+}
+
 
 
 

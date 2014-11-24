@@ -469,7 +469,7 @@ ul {
   transition: left 0.4s ease;
   background: white;
   text-align: center;
-  height: 90vh; }
+  height: 100vh; }
   #sidemenu ul {
     text-decoration: none;
     list-style: none;
@@ -605,15 +605,24 @@ body.show_sidemenu .pusher {
 /*---------------------------- Page display treatments --------------------------------*/
 h2 {
   color: white;
-  font-size: 2em; }
+  font-size: 1.3em;
+  letter-spacing: 5px; }
+  @media screen and (min-width: 600px) {
+    h2 {
+      font-size: 1.5em;
+      padding-left: 10px; } }
 
 .page-title {
+  margin-top: 20px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-left: 10px; }
+  text-align: center; }
+  @media screen and (min-width: 600px) {
+    .page-title {
+      text-align: left; } }
 
 .flex-row {
   -webkit-flex-wrap: wrap;
@@ -675,6 +684,14 @@ h2 {
   @media screen and (max-width: 600px) {
     .banner img {
       height: 200px; } }
+
+/*---------------------------- Page display FAQs --------------------------------*/
+#verticleTab {
+  width: 100%; }
+
+.resp-tabs-container {
+  width: 100%;
+  margin-top: 50px; }
 
 /*------------------------------------------- Footer -------------------------------------------*/
 footer {

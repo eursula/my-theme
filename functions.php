@@ -27,18 +27,6 @@ add_action('header_menu', 'register_my_custom_submenu_page');
 
 add_editor_style('editor-style.css');
 
-function my_image_tag() {
-	global $wpdb;
-	global $post;
-	$my_post_image = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_parent= $post->ID and post_type = 'attachment'");
-	if ($my_post_image == 0) {
-	echo "";
-	}
-	else {
-	echo wp_get_attachment_image($my_post_image, $size='large', $icon = false);
-	}
-}
-
 if(!is_admin()){
 
 	# jQuery
@@ -49,32 +37,47 @@ if(!is_admin()){
 	);
 
 
-	# Theme script
-	/*wp_register_script('nav', $dir.'/js/script.js', 
+	/*Theme script
+	wp_register_script('nav', $dir.'/js/script.js', 
 		['jquery', 'slidesjs'],
 		false, 
 		true
 	);*/
 
-	wp_register_script('toggle-class', $dir.'/js/script.js',
+	/*wp_register_script('toggle-class', $dir.'/js/script.js',
 		['jquery', 'toggleClass'],
 		false,
 		true
 	);
 
-	wp_enqueue_script('toggle-class');
+	wp_enqueue_script('toggle-class');*/
 
+
+
+	# Tabs scripts
+	wp_register_script('tabs', $dir.'/js/easyResponsiveTabs.js',
+		false,
+		false,
+		true
+	);
+
+	wp_enqueue_script('tabs');
+	
+
+	# Theme script
 	wp_register_script('theme', $dir.'/js/script.js',
 		false,
 		false,
 		true
-	);  
+	);
 
 	wp_enqueue_script('theme');
 
 	# Bootstrap
 	wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
 
+	# Tabs styles
+	wp_enqueue_style('tabs-theme', $dir.'/css/easy-responsive-tabs.css');
 
 	# Theme styles
 	wp_enqueue_style('theme', $dir.'/css/style.css');
