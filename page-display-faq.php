@@ -8,35 +8,30 @@
 		<?php
 			$args = [
 				'post_type' => 'faq',
-				'order'     => 'ASC',
+				'order'     => 'DESC',
 				'orderby'   => 'menu_order',
 				'showposts' => -1
 			];
-
-			query_posts($args);
 		?>
-		<?php if(have_posts()): ?>
-
-		<?php while(have_posts()): ?>
-
-		<?php the_post(); ?>
-
-
-	
-
-		<div id="verticalTab">
-
-					<?php echo types_render_field('question', ['output' => 'html']); ?>
-		</div>
-		<div class="resp-tabs-container">
-			
-				<?php echo types_render_field('answer', ['output' => 'html']); ?>	
 		
+
+		<div class="verticalTab">
+			<ul class="resp-tabs-list">
+				<?php query_posts($args); if(have_posts()): while(have_posts()): the_post(); ?>
+				<li>
+					<?php echo types_render_field('question', ['output' => 'html']); ?>
+				</li>
+				<?php endwhile; endif; ?>
+			</ul>
+					
+			<div class="resp-tabs-container">
+				<?php query_posts($args); if(have_posts()): while(have_posts()): the_post(); ?>
+				<div>
+					<?php echo types_render_field('answer', ['output' => 'html']); ?>
+				</div>
+				<?php endwhile; endif; ?>
+			</div>
 		</div>
-
-	<?php endwhile; ?>
-	<?php endif; ?>
-
 	</div>
 <?php wp_reset_query(); ?>
 

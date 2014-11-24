@@ -3,7 +3,7 @@
 # Template Directory
 $dir = get_template_directory_uri();
 
-home_url( $dir.'index.php/home' );
+
 
 
 //register_nav_menu('main', 'Main nav bar');

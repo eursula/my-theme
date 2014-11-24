@@ -14,6 +14,13 @@ jQuery(function(){
 			$('body').toggleClass('show_usermenu')
 		})
 
+
+        $('.verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+
 });
 
 /*$(".open").click(function(e) {
