@@ -1,7 +1,7 @@
 <?php /* Template Name: Page with Banner */ ?>
 
-<?php get_header(); 
-?>
+<?php get_header(); ?>
+
 <div class="container flex flex-column">
 	<?php the_post(); ?>
 

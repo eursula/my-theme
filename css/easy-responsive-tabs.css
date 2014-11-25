@@ -4,6 +4,7 @@
     background: #f5f5f5;
     font-family: 'Segoe UI';
 }
+
 ul.resp-tabs-list, p {
     margin: 0px;
     padding: 0px;
@@ -19,14 +20,21 @@ li.resp-tab-item{
 }
 
 .resp-tabs-list li {
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
     display: inline-block;
     padding: 13px 15px;
     margin: 0;
     list-style: none;
     cursor: pointer;
     float: left;
+    letter-spacing: 2px;
+    vertical-align: center;
+}
+
+.resp-tabs-list li p{
+    margin: 0;
+    padding-top: 5px;
 }
 
 .resp-tabs-container {
@@ -88,6 +96,9 @@ h2.resp-accordion {
     /*border-radius: 4px;*/
     color: white;
     clear: none;
+    font-size: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
 }
 
 .resp-vtabs .resp-tab-content {
@@ -103,6 +114,7 @@ h2.resp-accordion {
     z-index: 1;
     margin-right: -1px !important;
     padding: 14px 15px 15px 14px !important;
+
 }
 
 .resp-arrow {
@@ -124,17 +136,21 @@ h2.resp-tab-active span.resp-arrow {
 
 /*-----------Accordion styles-----------*/
 h2.resp-tab-active {
-    background: #DBDBDB !important;
+    background: white !important;
+    color: #B2854C;
+
 }
 .resp-easy-accordion  h2.resp-accordion {
         display: block;
 }
 .resp-easy-accordion .resp-tab-content {
     border: 1px solid #c1c1c1;
+   
 }
 
 .resp-easy-accordion .resp-tab-content:last-child {
     border-bottom: 1px solid #c1c1c1 !important;
+
 }
 
 .resp-jfit {
@@ -142,9 +158,6 @@ h2.resp-tab-active {
     margin: 0px;
 }
 
-.resp-tab-content-active {
-    display: block;
-}
 
 h2.resp-accordion:first-child {
     border-top: 1px solid #c1c1c1 !important;
@@ -160,6 +173,10 @@ h2.resp-accordion:first-child {
         display: block;
     }
 
+    .resp-vtabs li.resp-tab-active {
+        background-color: white;
+    }
+
     .resp-vtabs .resp-tab-content {
         border: 1px solid #C1C1C1;
     }
@@ -171,6 +188,13 @@ h2.resp-accordion:first-child {
         min-height: initial;
         clear: none;
     }
+
+    .resp-tab-content-active {
+        display: block;
+        background-color: #DBDBDB;
+        color: #373737;
+    }
+    
     .resp-accordion-closed {
         display:none !important;
     }
