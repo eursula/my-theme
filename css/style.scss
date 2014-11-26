@@ -675,7 +675,79 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 //
 
-/*------------------------------------------- Footer -------------------------------------------*/
+
+/*------------------------------------ Register Form -----------------------------*/
+
+div#register-form {
+    width: 400px; 
+    overflow: hidden; 
+    height: 270px; 
+    position: relative; 
+    background: #f9f9f9; //url(images/secure.png) no-repeat 260px 40px; 
+    font-family: Helvetica Neue, Helvetica, Arial !important;
+}
+
+div#register-form input[type="text"] {
+    display: block;
+    border: 1px solid #ccc;
+    margin: 5px 20px;
+    padding: 9px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    width: 200px;
+    font-family: Helvetica Neue, Helvetica, Arial !important;
+    color: $background-color; 
+}
+ 
+div#register-form input[type="text"]:hover {
+    border-color: #b1b1b1;
+
+}
+ 
+div#register-form input[type="text"]:focus {
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+}
+
+div#register-form input[type="submit"]#register {
+    background: url(images/register.jpg) no-repeat;
+    border: 0;
+    clear: both;
+    cursor: pointer;
+    height: 31px;
+    overflow: hidden;
+    position: relative;
+    left:295px;
+    text-indent: -9999px;
+    top:42px;
+    width:92px;
+}
+div#register-form input[type="submit"]#register:hover {
+    background-position: 0 -32px;
+}
+
+#register-form span {
+    display: block;
+    margin-bottom: 22px;
+    color: $gold;
+}
+ 
+#register-form .title {margin-left:15px}
+#register-form .title h1,
+#register-form .title h1 {
+    margin:7px 0;
+    color: $gold;
+}
+ 
+p.statement {
+    position:absolute;
+    bottom:-2px;
+    left:10px;
+    font-size:.9em;
+    color: $gold;
+}
+
+/*------------------------------------ Footer -----------------------------*/
 footer{
 	display: flex;
 	justify-content: space-between;

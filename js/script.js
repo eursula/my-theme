@@ -21,6 +21,13 @@ jQuery(function(){
             fit: true
         });
 
+        $(document).ready(function() {
+            $(".show").fancybox({
+                'titleShow'     : 'false',
+                'transitionIn'      : 'fade',
+                'transitionOut'     : 'fade'
+            });
+        });
 });
 
 /*$(".open").click(function(e) {

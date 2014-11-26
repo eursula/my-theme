@@ -4,12 +4,6 @@
 $dir = get_template_directory_uri();
 
 
-
-
-//register_nav_menu('main', 'Main nav bar');
-
-//register_nav_menu('topmenu', 'Top Menu');
-
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -36,22 +30,14 @@ if(!is_admin()){
 		true
 	);
 
+	# FancyBox JS
+	wp_register_script('mousewheel', $dir.'/includes/fancybox/lib/jquery.mousewheel-3.0.6.pack.js', ['jquery'], false, true);
 
-	/*Theme script
-	wp_register_script('nav', $dir.'/js/script.js', 
-		['jquery', 'slidesjs'],
-		false, 
-		true
-	);*/
+	wp_register_script('fancybox', $dir.'/includes/fancybox/source/jquery.fancybox.pack.js', ['jquery', 'mousewheel'], false, true);
 
-	/*wp_register_script('toggle-class', $dir.'/js/script.js',
-		['jquery', 'toggleClass'],
-		false,
-		true
-	);
+	wp_enqueue_script('fancybox');
 
-	wp_enqueue_script('toggle-class');*/
-
+	wp_enqueue_style('fancy-style', $dir.'/includes/fancybox/source/jquery.fancybox.css');
 
 
 	# Tabs scripts
