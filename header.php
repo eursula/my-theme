@@ -29,8 +29,10 @@
 					<?php wp_nav_menu('header-menu'); ?>
 				</div>
 				<div class="login-menu">
-					<a href="#" id="left">Sign In</a>
-					<a href="#">Sign Up</a>
+					<a href="index.php/sign-in" id="left">Sign In</a>
+					<div id="registration">
+						<a class="show register-button" href="#register-form">Sign Up</a>
+					</div>
 				</div>
 				<a href="<?php echo home_url() ?>" class="header-logo">
 					<h1 id="logo1">BEAUTY</h1>
