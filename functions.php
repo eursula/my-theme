@@ -37,7 +37,13 @@ if(!is_admin()){
 
 	wp_enqueue_script('fancybox');
 
-	wp_enqueue_style('fancy-style', $dir.'/includes/fancybox/source/jquery.fancybox.css');
+	wp_register_style('fancy-style', 
+		$dir.'/includes/fancybox/source/jquery.fancybox.css',
+		array(),
+		'',
+		'screen');
+
+	wp_enqueue_style('fancy-style');
 
 
 	# Tabs scripts
