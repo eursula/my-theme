@@ -74,5 +74,16 @@ if(!is_admin()){
 	# Theme styles
 	wp_enqueue_style('theme', $dir.'/css/style.css');
 
+	function add_appointments_css_style() {
+		if ( !class_exists( 'Appointments' ) )
+			return;
+		// You may add additional conditions here, e.g. load styles only for a certain page
+		global $appointments;
+
+		$appointments->load_scripts_styles( );
+	}
+	add_action( 'template_redirect', 'add_appointments_css_style' );
+
 }
+
 
