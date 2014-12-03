@@ -451,6 +451,10 @@ a:hover {
     color: #373737; }
   #usermenu p {
     color: #373737; }
+  #usermenu #menu-logged-in-user {
+    padding-top: 20px; }
+  #usermenu a.logout {
+    position: relative; }
 
 .login-menu {
   display: -webkit-box;
@@ -509,14 +513,14 @@ a:hover {
 	State of the page with the activated topmenu	
 */
 body.show_topmenu {
-  padding-top: 265px; }
+  padding-top: 295px; }
 
 body.show_topmenu #topmenu {
   top: 0; }
 
 body.show_usermenu .pusher {
-  -webkit-transform: translate3d(0, 179px, 0);
-  transform: translate3d(0, 179px, 0); }
+  -webkit-transform: translate3d(0, 171px, 0);
+  transform: translate3d(0, 171px, 0); }
 
 body.show_sidemenu .pusher {
   -webkit-transform: translate3d(200px, 0, 0);
@@ -797,6 +801,22 @@ p.statement {
   left: 10px;
   font-size: .9em;
   color: #b2854c; }
+
+/*--------- Version 2 -----------*/
+.container .register label {
+  color: white; }
+
+/*------------------------------------ Login Form -----------------------------*/
+.login-form {
+  background-color: white;
+  padding: 5px;
+  margin-top: 20px; }
+
+input[type="text"] {
+  padding-right: 5px; }
+
+label {
+  margin-right: 10px; }
 
 /*------------------------------------ Footer -----------------------------*/
 footer {

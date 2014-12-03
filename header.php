@@ -19,20 +19,33 @@
 		</div>
 
 		<div id="usermenu">
-			<p>Log in or register with us</p>
-			<?php wp_nav_menu( array( 'theme_location' => 'user-menu' ) ); ?>
+			<?php if(is_user_logged_in()): ?>
+				<?php wp_nav_menu(array( 'theme_location' => 'logged-in-user' ) ); ?>
+				<li><a href="<?php echo wp_logout_url('index.php'); ?>" title="Logout" class="logout">Logout</a></li>
+			<?php else: ?>
+				<p>Log in or register with us</p>
+				<?php wp_nav_menu( array( 'theme_location' => 'user-menu' ) ); ?>
+			<?php endif; ?>
 		</div>
 
 		<header>
 			<div class="container flex flex-j-between" id="b-menu">
 				<div class="main-menu">
-					<?php wp_nav_menu('header-menu'); ?>
+					<?php if(is_user_logged_in()): ?>
+						<?php wp_nav_menu(array( 'theme_location' => 'header-user-menu' ) ); ?>
+					<?php else: ?>
+						<?php wp_nav_menu(array( 'theme_location' => 'header-menu' ) ); ?>
+					<?php endif; ?>
 				</div>
 				<div class="login-menu">
+					<?php if(is_user_logged_in()): ?>
+						<a href="<?php echo wp_logout_url('index.php'); ?>" title="Logout">Logout</a>
+					<?php else: ?>
 					<a href="index.php/sign-in" id="left">Sign In</a>
 					<div id="registration">
-						<a class="show register-button" href="#register-form">Sign Up</a>
+						<a href="index.php/sign-up">Sign Up</a>
 					</div>
+					<?php endif; ?>
 				</div>
 				<a href="<?php echo home_url() ?>" class="header-logo">
 					<h1 id="logo1">BEAUTY</h1>
@@ -69,7 +82,7 @@
 			</div><!-- /Registration -->
 
 			<div style="display:none"> <!-- Sign In -->
-		        <div id="register-form">
+		        <div id="signin-form">
 		        <div class="title">
 		            <h1>Register your Account</h1>
 		            <span>Sign Up with us and Enjoy!</span>
