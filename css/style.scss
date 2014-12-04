@@ -785,8 +785,42 @@ p.statement {
 
 
 
+/*------------------------------------ Facials -----------------------------*/
 
+.facial-content{
+	background-color: white;
+	//margin-top: 20px;
+	padding: 20px;
 
+	@media screen and (max-width: 600px){
+		padding: 10px;
+	}
+
+	h2{
+		color: $gold;
+
+		@media screen and (max-width: 600px){
+			text-align: center;
+		}
+	}
+	
+
+	p{
+		font-size: 1.3em;
+		line-height: 2;
+		text-align: justify;
+
+		@media screen and (max-width: 600px){
+			font-size: 1.1em;
+		}
+
+	}
+
+	h3{
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+}
 /*------------------------------------ Login Form -----------------------------*/
 
 .login-form{

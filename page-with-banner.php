@@ -10,7 +10,13 @@
 	<div class="banner">
 		<?php echo types_render_field('banner-image', ['url' => false]); ?>
 	</div>
-	
+
 	<?php echo the_content(); ?>
+
+	<div class="container content">
+		<?=types_render_field('column-2', ['output' => 'html']); ?>
+	</div>
+	
+	
 
 <?php get_footer(); ?>
