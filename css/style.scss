@@ -80,7 +80,14 @@ header .container:after{ content: normal; }
 	} 
 }
 
+/*.fixed-menu{
+	position: fixed;
+	background-color: $background-color;
+
+}*/
+
 .container .main-menu{
+
 	@media screen and (max-width: 600px){
 		display: none;
 	}
@@ -501,10 +508,9 @@ body.show_sidemenu .pusher{
 }
 
 .face-pic img{
-	margin-top: 60px;
+	margin-top: 80px;
 	width: 100vw;
-	padding: 5px;
-	background-color: white;
+
 	@media screen and (min-width: 600px){
 		width: 100%;
 		margin-top: 80px;
@@ -785,7 +791,7 @@ p.statement {
 
 
 
-/*------------------------------------ Facials -----------------------------*/
+/*------------------------------------ Page display Services -----------------------------*/
 
 .facial-content{
 	background-color: white;
@@ -820,6 +826,13 @@ p.statement {
 		font-weight: bold;
 		font-size: 1.1em;
 	}
+}
+
+#back-arrow{
+	color: $gold;
+	padding-bottom: 10px;
+	padding-left: 5px;
+
 }
 /*------------------------------------ Login Form -----------------------------*/
 
