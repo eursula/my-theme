@@ -195,19 +195,25 @@ body {
   margin: 0;
   margin: 0 auto;
   font-family: 'Open Sans';
-  background-color: #373737;
+  background-color: #000f16;
   -webkit-transition: padding-top 0.4s ease;
   transition: padding-top 0.4s ease;
   overflow-y: scroll;
   overflow-x: hidden; }
 
 header {
-  background: #373737;
+  background: #000f16;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  /*@media screen and (min-width: 600px){
-  		position: fixed;
-  	}*/ }
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  padding-bottom: 30px;
+  z-index: 10; }
+  @media screen and (max-width: 600px) {
+    header {
+      height: 70px;
+      padding-top: 1em; } }
 
 header .container {
   display: -webkit-box;
@@ -254,7 +260,7 @@ header .container:after {
   font-size: 2.5em; }
 
 #icon-hamburger:before {
-  color: #b2854c;
+  color: #f1a9a0;
   margin-left: 5px; }
   @media screen and (min-width: 600px) {
     #icon-hamburger:before {
@@ -293,9 +299,9 @@ header .container:after {
       margin-bottom: 0;
       border-color: black transparent; }
       .container .main-menu li li:hover {
-        background-color: #b2854c; }
+        background-color: #f1a9a0; }
     .container .main-menu a {
-      color: #b2854c;
+      color: #f1a9a0;
       font-size: 1.2em;
       margin: .5em;
       padding-bottom: 0;
@@ -316,6 +322,15 @@ header .container:after {
       .container .main-menu .sub-menu li a:hover {
         border-bottom: none;
         text-decoration: none; } }
+
+#main {
+  padding-top: 10px; }
+  @media screen and (min-width: 600px) {
+    #main {
+      padding-top: 100px; } }
+
+#main.long {
+  padding-top: 150px; }
 
 ul {
   text-decoration: none;
@@ -355,7 +370,7 @@ ul {
   .header-logo #logo1 {
     font-family: 'Economica';
     font-size: 2em;
-    color: #b2854c;
+    color: #f1a9a0;
     text-align: center;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 5px;
@@ -382,7 +397,7 @@ ul {
     -ms-flex-pack: center;
     justify-content: center; }
     .header-logo .main-pic #x-logopic {
-      background-image: url("img/logo-gold.png");
+      background-image: url("img/logo-white.png");
       -webkit-background-size: 100% 100%;
       background-size: 100% 100%;
       height: 25px;
@@ -407,7 +422,7 @@ a:hover {
   #topmenu li,
   #sidemenu li,
   #usermenu li {
-    border-bottom: 1px dotted #373737;
+    border-bottom: 1px dotted #000f16;
     text-align: center;
     line-height: 2; }
   #topmenu a,
@@ -453,9 +468,9 @@ a:hover {
   #usermenu a {
     color: white; }
   #usermenu a:hover {
-    color: #373737; }
+    color: #000f16; }
   #usermenu p {
-    color: #373737; }
+    color: #000f16; }
   #usermenu #menu-logged-in-user {
     padding-top: 20px; }
   #usermenu a.logout {
@@ -505,14 +520,13 @@ a:hover {
   #sidemenu a {
     color: #b2854c; }
   #sidemenu a:hover {
-    color: #373737; }
+    color: #000f16; }
   #sidemenu p {
-    color: #373737; }
+    color: #000f16; }
 
 .pusher {
   -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding-top: 1em; }
+  transition: all 0.2s ease; }
 
 /*
 	State of the page with the activated topmenu	
@@ -588,12 +602,30 @@ body.show_sidemenu .pusher {
     -webkit-transform: scale(0.8); }
 
 .face-pic img {
-  margin-top: 80px;
-  width: 100vw; }
+  width: 100vw;
+  margin-top: 65px;
+  position: fixed;
+  height: 200px;
+  z-index: -1; }
   @media screen and (min-width: 600px) {
     .face-pic img {
+      margin-top: 100px;
+      padding-top: 70px;
       width: 100%;
-      margin-top: 80px; } }
+      margin-top: 80px;
+      height: 550px;
+      position: fixed; } }
+
+#content {
+  width: 100%;
+  position: relative;
+  top: 272px;
+  background-color: rgba(0, 15, 22, 0.9); }
+  @media screen and (min-width: 600px) {
+    #content {
+      top: 630px;
+      height: 1500px;
+      /* Demo purposes */ } }
 
 .promotion-box {
   display: -webkit-box;
@@ -610,7 +642,7 @@ body.show_sidemenu .pusher {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 10px;
-  border: 5px solid #b2854c; }
+  border: 5px solid white; }
   .promotion-box img {
     width: 20px;
     height: 20px; }
@@ -631,11 +663,16 @@ body.show_sidemenu .pusher {
   .main p, .main h3 {
     color: #ABB7B7;
     line-height: 2;
-    font-size: 1.5em;
-    text-align: justify; }
+    font-size: 1.3em;
+    text-align: justify;
+    letter-spacing: 2px; }
+  .main h2 {
+    color: #b2854c; }
   .main h3 {
     font-size: 2em;
-    color: #F1A9A0; }
+    color: #b2854c;
+    background-color: white;
+    padding: 5px; }
 
 /*---------------------------- Page display treatments --------------------------------*/
 h2 {
@@ -760,7 +797,7 @@ div#register-form input[type="text"] {
   -webkit-border-radius: 4px;
   width: 200px;
   font-family: Helvetica Neue, Helvetica, Arial !important;
-  color: #373737; }
+  color: #000f16; }
 
 div#register-form input[type="text"]:hover {
   border-color: #b1b1b1; }
@@ -809,6 +846,44 @@ p.statement {
 .container .register label {
   color: white; }
 
+/*--------------------------------------- My Account Form ---------------------*/
+.account-form {
+  padding: 10px;
+  margin-top: 150px;
+  background-color: #abb7b7; }
+  .account-form label {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px; }
+  .account-form input {
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: 'Andale Mono'; }
+  .account-form p {
+    color: #b2854c; }
+
+/*-------------------------- Contact Page & Form -----------------------------*/
+#contact {
+  background-color: #abb7b7; }
+  #contact h2 {
+    padding-top: 20px; }
+  #contact input[type="submit"] {
+    border: none;
+    background-color: #000f16;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    color: #abb7b7;
+    font-family: 'Andale Mono'; }
+  #contact textarea {
+    border: none;
+    padding: 2px;
+    font-family: 'Andale Mono';
+    width: 100%; }
+
+.div.wpcf7-mail-sent-ok {
+  border: 1px dotted #f1a9a0; }
+
 /*------------------------------------ Page display Services -----------------------------*/
 .facial-content {
   background-color: white;
@@ -833,7 +908,7 @@ p.statement {
     font-size: 1.1em; }
 
 #back-arrow {
-  color: #b2854c;
+  color: #f1a9a0;
   padding-bottom: 10px;
   padding-left: 5px; }
 
@@ -861,7 +936,8 @@ footer {
   justify-content: space-between;
   background-color: white;
   height: 50px;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  z-index: 10; }
   footer .footer-pic {
     background-image: url("img/logo-gold.png");
     -webkit-background-size: 100% 100%;

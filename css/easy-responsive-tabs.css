@@ -55,8 +55,7 @@ h2.resp-accordion {
 }
 
 .resp-tab-active {
-    border: 1px solid #c1c1c1;
-    background-color: blue;
+    border: 1px solid white;
     border-bottom: none;
     margin-bottom: -1px !important;
     padding: 12px 14px 14px 14px !important;
@@ -88,8 +87,8 @@ h2.resp-accordion {
 
 .resp-vtabs .resp-tabs-container {
     padding: 0px;
-    background-color: #B2854C;
-    border: 1px solid #B2854C;
+    background-color: #ABB7B7;
+    border: 1px solid white;
     float: left;
     width: 48%;
     min-height: 450px;
@@ -106,9 +105,9 @@ h2.resp-accordion {
 }
 
 .resp-vtabs li.resp-tab-active {
-    border: 1px solid #B2854C;
+    border: 1px solid white;
     border-right: none;
-    background-color: #B2854C;
+    background-color: #ABB7B7;
     color: white;
     position: relative;
     z-index: 1;
@@ -138,18 +137,19 @@ h2.resp-tab-active span.resp-arrow {
 h2.resp-tab-active {
     background: white !important;
     color: #B2854C;
+    border: 1px solid white;
 
 }
 .resp-easy-accordion  h2.resp-accordion {
         display: block;
 }
 .resp-easy-accordion .resp-tab-content {
-    border: 1px solid #c1c1c1;
+    border: 1px solid white;
    
 }
 
 .resp-easy-accordion .resp-tab-content:last-child {
-    border-bottom: 1px solid #c1c1c1 !important;
+    border-bottom: 1px solid white !important;
 
 }
 

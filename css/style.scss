@@ -5,8 +5,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 @import url(http://fonts.googleapis.com/css?family=Economica|Fira+Mono|Oxygen+Mono|Open+Sans|Open+Sans+Condensed:300);
 
-$background-color: #373737;
+$background-color: #000F16;
 $gold: #B2854C;
+$grey: #ABB7B7;
+$pink: #F1A9A0;
 
 
 body{
@@ -17,22 +19,31 @@ body{
 	transition: padding-top 0.4s ease;
 	overflow-y: scroll;
 	overflow-x: hidden;
+
+
 }
 
 header{
 	background: $background-color;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	padding-bottom: 30px;
+	z-index: 10;
 
-	/*@media screen and (min-width: 600px){
-			position: fixed;
-		}*/
+	@media screen and (max-width: 600px){
+		height: 70px;
+		padding-top: 1em;
+	}
 }
 
 header .container{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 
 	.icon-button{
 		background-image: url("img/B.png") ;
@@ -54,6 +65,7 @@ header .container:after{ content: normal; }
 	margin: 0 auto;
 	padding-left: 0;
 	padding-right: 0;
+
 	display: flex;
 	max-width: 960px;
 }
@@ -66,7 +78,7 @@ header .container:after{ content: normal; }
 }
 
 #icon-hamburger:before{
-	color: $gold;
+	color: $pink;
 	margin-left: 5px;
 	@media screen and (min-width: 600px){
 		display: none;
@@ -110,12 +122,12 @@ header .container:after{ content: normal; }
 
 
 			li:hover{
-				background-color: $gold;	
+				background-color: $pink;	
 			}
 		}
 
 		a{
-			color: $gold;
+			color: $pink;
 			font-size: 1.2em;
 			margin: .5em;
 			padding-bottom: 0;
@@ -151,6 +163,20 @@ header .container:after{ content: normal; }
 		}
 	}
 }
+
+#main{
+	padding-top: 10px;
+
+	@media screen and (min-width: 600px){
+		padding-top: 100px;
+	}
+}
+
+#main.long{
+	padding-top: 150px;
+}
+
+
 
 ul{
 	text-decoration: none;
@@ -210,7 +236,7 @@ a .header-logo{
 	#logo1{
 		font-family: 'Economica';
 		font-size: 2em;
-		color: $gold;
+		color: $pink;
 		text-align: center;
 		-webkit-font-smoothing: antialiased;
 		letter-spacing: 5px;
@@ -243,7 +269,7 @@ a .header-logo{
 		justify-content: center;
 		
 		#x-logopic{
-			background-image: url("img/logo-gold.png");
+			background-image: url("img/logo-white.png");
 			background-size: 100% 100%;
 			height: 25px;
 			width: 25px;
@@ -425,7 +451,6 @@ a:hover{
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 
-	padding-top: 1em;
 }
 /*
 	State of the page with the activated topmenu	
@@ -508,12 +533,31 @@ body.show_sidemenu .pusher{
 }
 
 .face-pic img{
-	margin-top: 80px;
 	width: 100vw;
+	margin-top: 65px;
+	position: fixed;
+	height: 200px;
+	z-index: -1;
 
 	@media screen and (min-width: 600px){
+		margin-top: 100px;
+		padding-top: 70px;
 		width: 100%;
 		margin-top: 80px;
+		height: 550px;
+		position: fixed;
+	}
+}
+
+#content{
+	width: 100%;
+	position: relative;
+	top: 272px;
+	background-color: rgba(0, 15, 22, 0.9);
+	
+	@media screen and (min-width: 600px){
+		top: 630px;
+		height: 1500px; /* Demo purposes */
 	}
 }
 
@@ -523,7 +567,7 @@ body.show_sidemenu .pusher{
 	justify-content: center;
 	margin: 10px;
 	//background-color: white;
-	border: 5px solid $gold;
+	border: 5px solid white;
 
 	img{
 		width: 20px;
@@ -551,20 +595,30 @@ body.show_sidemenu .pusher{
 
 	}
 }
+
 .main{
-	padding: 1em 1.5em; 
+	padding: 1em 1.5em;
+
 
 	p, h3{
 		color: #ABB7B7;
 		//-webkit-font-smoothing: antialiased;
 		line-height: 2;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		text-align: justify;
+		letter-spacing: 2px;
+
+	}
+
+	h2{
+		color: $gold;
 	}
 
 	h3{
 		font-size: 2em;
-		color: #F1A9A0;
+		color: $gold;
+		background-color: white;
+		padding: 5px;
 	}	
 }
 
@@ -709,6 +763,7 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 #primary{
 	color: #ddd;
+
 }
 
 /*------------------------------------ Register Form -----------------------------*/
@@ -789,6 +844,63 @@ p.statement {
 	color: white;
 }
 
+/*--------------------------------------- My Account Form ---------------------*/
+
+.account-form{
+	padding: 10px;
+	margin-top: 150px;
+	//background-color: rgba(255, 255, 255, 0.2);
+	background-color: $grey;
+	
+
+	label{
+		color: white;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+	}
+
+	input{
+		border: none;
+		border-radius: 2px;
+		font-size: 14px;
+		font-family: 'Andale Mono';
+	}
+
+	p{
+		color: $gold;
+	}
+}
+
+/*-------------------------- Contact Page & Form -----------------------------*/
+
+#contact{
+	background-color: $grey;
+
+	h2{
+		padding-top: 20px;
+	}
+
+	input[type="submit"]{
+		border: none;
+		background-color: $background-color;
+		padding: 5px 10px 5px 10px;
+		border-radius: 2px;
+		color: $grey;
+		font-family: 'Andale Mono';
+	}
+
+	textarea{
+		border: none;
+		padding: 2px;
+		font-family: 'Andale Mono';
+		width: 100%;
+	}
+}
+
+.div.wpcf7-mail-sent-ok{
+	border: 1px dotted $pink;
+
+}
 
 
 /*------------------------------------ Page display Services -----------------------------*/
@@ -796,6 +908,7 @@ p.statement {
 .facial-content{
 	background-color: white;
 	//margin-top: 20px;
+
 	padding: 20px;
 
 	@media screen and (max-width: 600px){
@@ -829,7 +942,7 @@ p.statement {
 }
 
 #back-arrow{
-	color: $gold;
+	color: $pink;
 	padding-bottom: 10px;
 	padding-left: 5px;
 
@@ -857,6 +970,7 @@ footer{
 	background-color: white;
 	height: 50px;
 	margin-bottom: 0px;
+	z-index: 10;
 
 	.footer-pic{
 		background-image: url("img/logo-gold.png");
@@ -903,7 +1017,6 @@ footer{
 	height: 0px;
 	width: 0px;
 }
-
 
 
 

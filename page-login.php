@@ -2,7 +2,7 @@
 
 	get_header(); ?>
 	
-	<h1>Login</h1>
+	<div id="main">
 	<div class="container login-form">
 
 		<?php 
@@ -14,6 +14,7 @@
 		
 		<?php wp_login_form($args); ?>
 
+	</div>
 	</div>
 	<!--<div class="container">
 		<h1>Registration</h1>

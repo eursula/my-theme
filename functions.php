@@ -177,7 +177,7 @@ if(!is_admin()){
 
 			if ( empty($error) ) {
 				do_action('edit_user_profile_update', $current_user->ID);
-				wp_redirect( site_url('/user/') . '?success=1' );
+				wp_redirect( home_url('/user/') . '?success=1' );
 				exit;
 			}
 		}
@@ -202,6 +202,11 @@ if(!is_admin()){
 		return $items;
 
 	}
+
+	function app_redirect( $script ){ 
+	    return str_replace("window.location.href=app_location()", "window.location.href='http://eursula.hicks.yoobee.net.nz/beauty_boutique'", $script); 
+	} 
+	add_filter( 'app_footer_scripts', 'app_redirect' );
 }
 
 
