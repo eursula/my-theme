@@ -2,11 +2,12 @@
 
 <?php get_header(); ?>
 
-	<div id="main">
-		<div class="container flex flex-column">
+	<div id="main" class="container flex flex-column">
+		<h2><?php echo the_title(); ?></h2>
+		<div class="container">
 			<?php the_post(); ?>
 
-		   	<h2><?php echo the_title(); ?></h2>
+		   	
 			
 			<div class="cols flex flex-j-between flex-a-start">
 				<div class="main">

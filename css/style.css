@@ -665,25 +665,46 @@ body.show_sidemenu .pusher {
     padding: 10px; }
 
 /*-------------------------- Page Two Columns ---------------------------------*/
-@media screen and (max-width: 600px) {
-  .cols {
-    width: 100%; } }
+.cols {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  @media screen and (max-width: 600px) {
+    .cols {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .main {
-  padding: 1em 1.5em; }
+  padding: 10px; }
+  @media screen and (min-width: 600px) {
+    .main {
+      padding: 1em 1.5em; } }
   .main p, .main h3 {
+    font-size: 1em;
     color: #ABB7B7;
-    line-height: 2;
-    font-size: 1.3em;
-    text-align: justify;
+    text-align: left;
     letter-spacing: 2px; }
+    @media screen and (min-width: 600px) {
+      .main p, .main h3 {
+        line-height: 2;
+        font-size: 1.3em;
+        text-align: justify; } }
   .main h2 {
     color: #b2854c; }
   .main h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #b2854c;
     background-color: white;
-    padding: 5px; }
+    padding: 10px; }
+    @media screen and (min-width: 600px) {
+      .main h3 {
+        padding: 5px; } }
 
 /*---------------------------- Page display treatments --------------------------------*/
 h2 {

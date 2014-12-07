@@ -606,36 +606,53 @@ body.show_sidemenu .pusher{
 /*-------------------------- Page Two Columns ---------------------------------*/
 .cols{
 	//background-color: white;
+	flex-direction: row;
 
+	
 	@media screen and (max-width: 600px){
 		width: 100%;
-
+		flex-direction: column;
 	}
 }
 
 .main{
-	padding: 1em 1.5em;
+	padding: 10px;
+
+	@media screen and (min-width: 600px){
+		padding: 1em 1.5em;
+	}
 
 
 	p, h3{
+		font-size: 1em;
 		color: #ABB7B7;
-		//-webkit-font-smoothing: antialiased;
-		line-height: 2;
-		font-size: 1.3em;
-		text-align: justify;
+		text-align: left;
 		letter-spacing: 2px;
 
+		@media screen and (min-width: 600px){
+			
+			//-webkit-font-smoothing: antialiased;
+			line-height: 2;
+			font-size: 1.3em;
+			text-align: justify;
+			
+		}
 	}
 
 	h2{
 		color: $gold;
+
 	}
 
 	h3{
-		font-size: 2em;
+		font-size: 1.5em;
 		color: $gold;
 		background-color: white;
-		padding: 5px;
+		padding: 10px;
+
+		@media screen and (min-width: 600px){
+			padding: 5px;
+		}
 	}	
 }
 
