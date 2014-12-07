@@ -207,6 +207,26 @@ if(!is_admin()){
 	    return str_replace("window.location.href=app_location()", "window.location.href='http://eursula.hicks.yoobee.net.nz/beauty_boutique'", $script); 
 	} 
 	add_filter( 'app_footer_scripts', 'app_redirect' );
+
+	function my_login_logo() { ?>
+	    <style type="text/css">
+	        body.login div#login h1 a {
+	            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/css/img/pink-letter-logo.png);
+	            padding-bottom: 30px;
+	        }
+	    </style>
+	<?php }
+	add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+		function my_login_logo_url() {
+	    return home_url();
+	}
+	add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+	function my_login_logo_url_title() {
+	    return 'Beauty Boutique';
+	}
+	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 }
 
 

@@ -29,13 +29,16 @@
 
 			?>
 
-			<div class="container facial-content flex flex-column">
-
+			<div class="container services-content flex flex-column">
+				<a href="<?php echo home_url('book-online') ?>">Book Now</a>
 				<?php echo the_content(); ?>
+
+
 
 				<?php query_posts($args); if(have_posts()): while(have_posts()): the_post(); ?>
 
 						<h3><? the_title() ?></h3>
+
 				
 						<?php echo types_render_field('description', ['output' => 'html']); ?>
 				

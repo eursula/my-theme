@@ -2,8 +2,8 @@
 
 <?php get_header(); ?>
 
-	<div id="main">
-		<div class="container flex flex-column">
+	<div id="main" class="container-grey">
+		<div class="container  flex flex-column">
 			<h2><?php echo the_title(); ?></h2>
 
 			<div id="booking-form" class="container flex flex-row">

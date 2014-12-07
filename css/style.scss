@@ -785,7 +785,7 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 /*------------------------------------ Register Form -----------------------------*/
 
-div#register-form {
+/*div#register-form {
     width: 400px; 
     overflow: hidden; 
     height: 270px; 
@@ -852,13 +852,41 @@ p.statement {
     left:10px;
     font-size:.9em;
     color: $gold;
-}
+}*/
 
 
 /*--------- Version 2 -----------*/
 
-.container .register label{
-	color: white;
+.register-pic{
+	background:
+    linear-gradient(
+      rgba(0, 15, 22, 0.5), 
+      rgba(0, 15, 22, 0.5)
+    ),
+    url("img/stone-spa.jpg" );
+	//background-image: url("img/purple-flower.jpg" no-repeat),
+	;
+	background-size: 100%;
+	//background-color: $grey;
+	min-height: 600px;
+    overflow: hidden;
+    //position: fixed;
+
+}
+
+.container.register{
+	margin-top: 20vh;
+	color: $background-color;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 2px;
+	-moz-box-shadow: 0 0 5px #555;
+	-webkit-box-shadow: 0 0 5px#555;
+	box-shadow: 0 0 5px #555;
+
+	@media screen and (min-width: 600px){
+		width: 35%;
+		padding: 50px;
+	}
 }
 
 /*--------------------------------------- My Account Form ---------------------*/
@@ -922,11 +950,12 @@ p.statement {
 
 /*------------------------------------ Page display Services -----------------------------*/
 
-.facial-content{
+.services-content{
 	background-color: white;
 	//margin-top: 20px;
 
 	padding: 20px;
+	
 
 	@media screen and (max-width: 600px){
 		padding: 10px;
@@ -937,6 +966,7 @@ p.statement {
 
 		@media screen and (max-width: 600px){
 			text-align: center;
+			margin-top: 20px;
 		}
 	}
 	
@@ -959,7 +989,7 @@ p.statement {
 }
 
 #back-arrow{
-	color: $pink;
+	color: $grey;
 	padding-bottom: 10px;
 	padding-left: 5px;
 
@@ -982,7 +1012,7 @@ p.statement {
     //position: fixed;
 }
 .login-form{
-	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.6);
 	margin-top: 20vh;
 	border-radius: 2px;
 	-moz-box-shadow: 0 0 5px #555;
@@ -995,12 +1025,46 @@ p.statement {
 	}
 }
 
-input[type="text"]{
-	padding-right: 5px;
+input[type="text"],
+input[type="password"]{
+	padding: 5px;
+	font-size: 12px;
+	font-family: 'Andale Mono';
 }
 
 label{
 	margin-right: 10px;
+	font-size: 16px;
+}
+
+input[type="submit"]{
+	margin-top: 30px;
+	padding: 10px 20px 10px 20px;
+	border: none;
+	background-color: white;
+	color: $background-color;
+	font-family: 'Open Sans';
+}
+
+.login h1 a {
+	background-image: url('../images/w-logo-blue.png?ver=20131202');
+	background-image: none, url('../images/wordpress-logo.svg?ver=20131107');
+	background-size: 80px 80px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	color: #999;
+	height: 80px;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3em;
+	margin: 0 auto 25px;
+	padding: 0;
+	text-decoration: none;
+	width: 80px;
+	text-indent: -9999px;
+	outline: none;
+	overflow: hidden;
+	display: block;
 }
 
 /*------------------------------------ Footer -----------------------------*/

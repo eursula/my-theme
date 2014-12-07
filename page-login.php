@@ -4,21 +4,17 @@
 	
 	<div id="main">
 		<div class="container-pic">
-			
-
-			<div id="content2">
-				<div class="container login-form flex flex-j-center">
-					
-					<?php 
-						$args = [
-							'redirect' => site_url( $_SERVER['index.php/user']),
-							'form_id'  => 'loginform'
-						]
-					?>
-					
-					<?php wp_login_form($args); ?>
-					
-					</div>
+			<div class="container login-form flex flex-j-center">
+				
+				<?php 
+					$args = [
+						'redirect' => site_url( $_SERVER['index.php(user)']),
+						'form_id'  => 'loginform'
+					]
+				?>
+				
+				<?php wp_login_form($args); ?>
+				
 				</div>
 			</div>
 		</div>

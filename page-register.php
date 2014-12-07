@@ -2,11 +2,13 @@
 
   	get_header(); ?>
 
-	<div id="main" class="long">
-	  	<div class="container register">
+	<div id="main">
+		<div class="register-pic">
+	  		<div class="container register">
 
 			<?php custom_registration_function(); ?>
 
+			</div>
 		</div>
 	</div>
   	<?php get_footer(); ?>
