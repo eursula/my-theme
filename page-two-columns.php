@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-	<div id="main">
+	<div id="main" class="container-white">
 		<div class="container flex flex-column">
 			<?php the_post(); ?>
 

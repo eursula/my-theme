@@ -39,7 +39,7 @@
 		<?php endif; ?>
 
 	</div>
-</main>
+</div>
 <?php wp_reset_query(); ?>
 		
 

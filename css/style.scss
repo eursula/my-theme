@@ -8,6 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 $background-color: #000F16;
 $gold: #B2854C;
 $grey: #ABB7B7;
+$light-grey: #D2D7D3;
 $pink: #F1A9A0;
 
 
@@ -65,7 +66,6 @@ header .container:after{ content: normal; }
 	margin: 0 auto;
 	padding-left: 0;
 	padding-right: 0;
-
 	display: flex;
 	max-width: 960px;
 }
@@ -176,6 +176,23 @@ header .container:after{ content: normal; }
 	padding-top: 150px;
 }
 
+.container-grey{
+	background-color: $light-grey;
+}
+
+.container-white{
+	background-color: #EEEEEE;
+	//border-bottom: 1px dotted $grey;
+
+	h2{
+		color: $grey;
+		padding-top: 20px;
+	}
+
+	.content{
+		color: $pink;
+	}
+}
 
 
 ul{
@@ -949,10 +966,33 @@ p.statement {
 }
 /*------------------------------------ Login Form -----------------------------*/
 
+.container-pic{
+	background:
+    linear-gradient(
+      rgba(0, 15, 22, 0.5), 
+      rgba(0, 15, 22, 0.5)
+    ),
+    url("img/purple-flower.jpg" );
+	//background-image: url("img/purple-flower.jpg" no-repeat),
+	;
+	background-size: 100%;
+	//background-color: $grey;
+	min-height: 600px;
+    overflow: hidden;
+    //position: fixed;
+}
 .login-form{
-	background-color: white;
-	padding: 5px;
-	margin-top: 20px;
+	background-color: rgb(255, 255, 255);
+	margin-top: 20vh;
+	border-radius: 2px;
+	-moz-box-shadow: 0 0 5px #555;
+	-webkit-box-shadow: 0 0 5px#555;
+	box-shadow: 0 0 5px #555;
+
+	@media screen and (min-width: 600px){
+		width: 35%;
+		padding: 50px;
+	}
 }
 
 input[type="text"]{
@@ -971,6 +1011,11 @@ footer{
 	height: 50px;
 	margin-bottom: 0px;
 	z-index: 10;
+	width: 100%;
+
+	@media screen and (min-width: 600px){
+		height: 250px;
+	}
 
 	.footer-pic{
 		background-image: url("img/logo-gold.png");

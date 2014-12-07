@@ -3,7 +3,7 @@
 	get_header(); ?>
 ?>
 
-<div id="main">
+<div id="main" class="container-grey">
 	<div class="container flex flex-column">
 		<?php the_post(); ?>
 

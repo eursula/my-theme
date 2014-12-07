@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id="main">
+<div id="main" class="container-grey">
 	<div class="container flex flex-column">
 		<h2 class="title"><?php echo the_title(); ?></h2>
 		<div class="flex flex-row">

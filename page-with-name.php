@@ -11,8 +11,7 @@
 				<h1 id="name2">BOUTIQUE</h1>
 				<div class="main-pic">
 					<div id="x-pic"></div>
-			</div>
-				
+			</div>	
 		</div>
 		
 		<div class="promotion-box">
@@ -20,7 +19,7 @@
 
 			<?php echo types_render_field('promotion_box', ['output' => 'html']); ?>
 		</div>
-		<?php get_footer(); ?>
 	</div>
+	<?php get_footer(); ?>
 		
 

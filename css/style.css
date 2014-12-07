@@ -332,6 +332,17 @@ header .container:after {
 #main.long {
   padding-top: 150px; }
 
+.container-grey {
+  background-color: #d2d7d3; }
+
+.container-white {
+  background-color: #EEEEEE; }
+  .container-white h2 {
+    color: #abb7b7;
+    padding-top: 20px; }
+  .container-white .content {
+    color: #f1a9a0; }
+
 ul {
   text-decoration: none;
   list-style: none;
@@ -913,10 +924,25 @@ p.statement {
   padding-left: 5px; }
 
 /*------------------------------------ Login Form -----------------------------*/
+.container-pic {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 15, 22, 0.5)), to(rgba(0, 15, 22, 0.5))), url("img/purple-flower.jpg");
+  background: -webkit-linear-gradient(rgba(0, 15, 22, 0.5), rgba(0, 15, 22, 0.5)), url("img/purple-flower.jpg");
+  background: linear-gradient(rgba(0, 15, 22, 0.5), rgba(0, 15, 22, 0.5)), url("img/purple-flower.jpg");
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  min-height: 600px;
+  overflow: hidden; }
+
 .login-form {
   background-color: white;
-  padding: 5px;
-  margin-top: 20px; }
+  margin-top: 20vh;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 5px #555555;
+  box-shadow: 0 0 5px #555; }
+  @media screen and (min-width: 600px) {
+    .login-form {
+      width: 35%;
+      padding: 50px; } }
 
 input[type="text"] {
   padding-right: 5px; }
@@ -937,7 +963,11 @@ footer {
   background-color: white;
   height: 50px;
   margin-bottom: 0px;
-  z-index: 10; }
+  z-index: 10;
+  width: 100%; }
+  @media screen and (min-width: 600px) {
+    footer {
+      height: 250px; } }
   footer .footer-pic {
     background-image: url("img/logo-gold.png");
     -webkit-background-size: 100% 100%;
