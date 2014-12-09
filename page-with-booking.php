@@ -2,11 +2,11 @@
 
 <?php get_header(); ?>
 
-	<div id="main" class="container-grey">
-		<div class="container  flex flex-column">
+	<div id="main" class="container-white">
+		<div class="container booking flex flex-column">
 			<h2><?php echo the_title(); ?></h2>
 
-			<div id="booking-form" class="container flex flex-row">
+			<div id="booking-form" class="container flex flex-column">
 				<?php if ( have_posts()) :
 			   while ( have_posts()) : the_post(); ?>
 

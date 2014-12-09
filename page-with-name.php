@@ -15,10 +15,9 @@
 		</div>
 		
 		<div class="promotion-box">
-			<?php echo types_render_field('promotion_icon', ['output' => 'html']); ?>
-
 			<?php echo types_render_field('promotion_box', ['output' => 'html']); ?>
 		</div>
+	
 	</div>
 	<?php get_footer(); ?>
 		

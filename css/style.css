@@ -228,6 +228,9 @@ header .container {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    header .container {
+      padding-right: 30px; } }
   header .container .icon-button {
     background-image: url("img/B.png");
     -webkit-background-size: 100% 100%;
@@ -299,7 +302,8 @@ header .container:after {
       margin-bottom: 0;
       border-color: black transparent; }
       .container .main-menu li li:hover {
-        background-color: #f1a9a0; }
+        background-color: #f1a9a0;
+        color: white; }
     .container .main-menu a {
       color: #f1a9a0;
       font-size: 1.2em;
@@ -317,7 +321,8 @@ header .container:after {
         height: 300px; } }
 @media screen and (min-width: 600px) {
     .container .main-menu .sub-menu li {
-      display: block; } }
+      display: block;
+      padding: 5px 10px 5px 10px; } }
     @media screen and (min-width: 600px) and (min-width: 600px) {
       .container .main-menu .sub-menu li a:hover {
         border-bottom: none;
@@ -336,13 +341,14 @@ header .container:after {
   background-color: #d2d7d3; }
 
 .container-white {
-  background-color: #EEEEEE; }
+  background-color: #eeeeee; }
   .container-white h2 {
     color: #abb7b7;
     padding-top: 20px; }
   .container-white .content {
     color: #f1a9a0; }
 
+/* Navigation */
 ul {
   text-decoration: none;
   list-style: none;
@@ -466,7 +472,7 @@ a:hover {
   width: 100%;
   -webkit-transition: top 0.4s ease;
   transition: top 0.4s ease;
-  background: #b2854c;
+  background: #f1a9a0;
   text-align: center; }
   #usermenu ul {
     text-decoration: none;
@@ -498,6 +504,10 @@ a:hover {
   margin-left: 20px;
   margin-right: 30px;
   width: 110px; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .login-menu {
+      padding: 5px;
+      width: 180px; } }
   .login-menu #left {
     padding-right: 15px;
     border-right: 1px solid white; }
@@ -634,35 +644,85 @@ body.show_sidemenu .pusher {
   background-color: rgba(0, 15, 22, 0.9); }
   @media screen and (min-width: 600px) {
     #content {
-      top: 630px;
-      height: 1500px;
-      /* Demo purposes */ } }
+      top: 630px; } }
+
+.space {
+  margin-bottom: 50px; }
 
 .promotion-box {
+  margin: 10px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  margin: 10px;
-  border: 5px solid white; }
+  justify-content: center; }
+  @media screen and (min-width: 600px) {
+    .promotion-box {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+  .promotion-box #wpcf-field-promotion_box,
+  .promotion-box #wpcf-field-promotion_box-2 {
+    border: 2px solid white;
+    font-size: 2em;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #b2854c;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+    @media screen and (min-width: 600px) {
+      .promotion-box #wpcf-field-promotion_box,
+      .promotion-box #wpcf-field-promotion_box-2 {
+        width: 45%;
+        margin: 30px;
+        letter-spacing: 2px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        vertical-align: center;
+        text-align: justify; } }
   .promotion-box img {
     width: 20px;
     height: 20px; }
   .promotion-box p {
-    color: #b2854c;
+    color: #d2d7d3;
     font-family: 'Open Sans';
     font-size: 2.3em;
     text-align: justify;
     padding: 10px; }
+
+.row {
+  margin-top: 50px;
+  width: 100%; }
 
 /*-------------------------- Page Two Columns ---------------------------------*/
 .cols {
@@ -799,88 +859,51 @@ h2 {
 
 See separate stylesheet: 'easy-responsive-tabs.css'
 
-//
-
+//*/
+.resp-tabs-container {
+  margin-bottom: 50px; }
 
 /*------------------------------------ Booking Form -----------------------------*/
 #booking-form {
-  background-color: white;
+  background-color: #eeeeee;
   padding: 5px; }
+  #booking-form p {
+    font-family: 'Open Sans'; }
+  #booking-form select {
+    font-family: 'Open Sans';
+    letter-spacing: 2px;
+    border: none;
+    margin: 5px; }
+  #booking-form option {
+    font-family: 'Open Sans'; }
+  #booking-form input[type="button"] {
+    border: none;
+    font-family: 'Open Sans';
+    margin: 10px;
+    padding: 10px; }
+  #booking-form .appointments-legend {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+.booking {
+  padding-top: 20px; }
+  @media screen and (max-width: 600px) {
+    .booking {
+      padding: 5px;
+      padding-top: 40px; } }
 
 /*------------------------------------ Appointments+ Page -----------------------------*/
 #primary {
   color: #ddd; }
 
 /*------------------------------------ Register Form -----------------------------*/
-/*div#register-form {
-    width: 400px; 
-    overflow: hidden; 
-    height: 270px; 
-    position: relative; 
-    background: #f9f9f9; //url(images/secure.png) no-repeat 260px 40px; 
-    font-family: Helvetica Neue, Helvetica, Arial !important;
-}
-
-div#register-form input[type="text"] {
-    display: block;
-    border: 1px solid #ccc;
-    margin: 5px 20px;
-    padding: 9px 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius:4px;
-    width: 200px;
-    font-family: Helvetica Neue, Helvetica, Arial !important;
-    color: $background-color; 
-}
- 
-div#register-form input[type="text"]:hover {
-    border-color: #b1b1b1;
-
-}
- 
-div#register-form input[type="text"]:focus {
-    -moz-box-shadow: 0 0 3px #ccc;
-    -webkit-box-shadow: 0 0 3px #ccc;
-}
-
-div#register-form input[type="submit"]#register {
-    background: url(images/register.jpg) no-repeat;
-    border: 0;
-    clear: both;
-    cursor: pointer;
-    height: 31px;
-    overflow: hidden;
-    position: relative;
-    left:295px;
-    text-indent: -9999px;
-    top:42px;
-    width:92px;
-}
-div#register-form input[type="submit"]#register:hover {
-    background-position: 0 -32px;
-}
-
-#register-form span {
-    display: block;
-    margin-bottom: 22px;
-    color: $gold;
-}
- 
-#register-form .title {margin-left:15px}
-#register-form .title h1,
-#register-form .title h1 {
-    margin:7px 0;
-    color: $gold;
-}
- 
-p.statement {
-    position:absolute;
-    bottom:-2px;
-    left:10px;
-    font-size:.9em;
-    color: $gold;
-}*/
-/*--------- Version 2 -----------*/
 .register-pic {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 15, 22, 0.5)), to(rgba(0, 15, 22, 0.5))), url("img/stone-spa.jpg");
   background: -webkit-linear-gradient(rgba(0, 15, 22, 0.5), rgba(0, 15, 22, 0.5)), url("img/stone-spa.jpg");
@@ -891,7 +914,7 @@ p.statement {
   overflow: hidden; }
 
 .container.register {
-  margin-top: 20vh;
+  margin-top: 10vh;
   color: #000f16;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 2px;
@@ -899,8 +922,33 @@ p.statement {
   box-shadow: 0 0 5px #555; }
   @media screen and (min-width: 600px) {
     .container.register {
-      width: 35%;
-      padding: 50px; } }
+      width: 40%;
+      padding: 35px;
+      padding-top: 10px; } }
+  .container.register .complete a {
+    color: #6C7A89;
+    border-bottom: 1px solid #6C7A89; }
+  .container.register label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #6C7A89; }
+  .container.register input[type="text"],
+  .container.register input[type="email"],
+  .container.register input[type="password"] {
+    width: 80%; }
+  .container.register .reg-form {
+    padding-top: 10px; }
+  .container.register .error-msg {
+    display: block;
+    color: #F64747; }
+  .container.register .form-title {
+    margin-bottom: 10px; }
+    .container.register .form-title p {
+      margin: 0px;
+      text-align: center;
+      font-size: 1.5em;
+      color: #6C7A89; }
 
 /*--------------------------------------- My Account Form ---------------------*/
 .account-form {
@@ -939,6 +987,25 @@ p.statement {
 
 .div.wpcf7-mail-sent-ok {
   border: 1px dotted #f1a9a0; }
+
+.hours {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 2;
+  color: white; }
 
 /*------------------------------------ Page display Services -----------------------------*/
 .services-content {
@@ -980,7 +1047,7 @@ p.statement {
   overflow: hidden; }
 
 .login-form {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #eeeeee;
   margin-top: 20vh;
   border-radius: 2px;
   -webkit-box-shadow: 0 0 5px #555555;
@@ -1004,8 +1071,8 @@ input[type="submit"] {
   margin-top: 30px;
   padding: 10px 20px 10px 20px;
   border: none;
-  background-color: white;
-  color: #000f16;
+  background-color: #000f16;
+  color: white;
   font-family: 'Open Sans'; }
 
 .login h1 a {
@@ -1031,36 +1098,96 @@ input[type="submit"] {
 
 /*------------------------------------ Footer -----------------------------*/
 footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   background-color: white;
-  height: 50px;
-  margin-bottom: 0px;
-  z-index: 10;
-  width: 100%; }
-  @media screen and (min-width: 600px) {
-    footer {
-      height: 250px; } }
-  footer .footer-pic {
-    background-image: url("img/logo-gold.png");
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-    height: 40px;
-    width: 40px;
-    -webkit-transform: scale(0.8);
-    margin: 5px 10px 0 10px; }
-  footer .logo > p {
-    font-family: 'Economica';
-    color: #b2854c;
-    font-size: 3em;
-    margin-top: 0;
-    padding-bottom: 10px; }
+  padding-bottom: 20px; }
+  footer .mobile {
+    display: none; }
+    @media screen and (max-width: 600px) {
+      footer .mobile .footer-pic {
+        background-image: url("img/logo-gold.png");
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        height: 40px;
+        width: 40px;
+        -webkit-transform: scale(0.8);
+        margin: 5px 10px 0 10px; } }
+    footer .mobile .logo > p {
+      font-family: 'Economica';
+      color: #b2854c;
+      font-size: 3em;
+      margin-top: 0;
+      padding-bottom: 10px; }
+      @media screen and (min-width: 600px) {
+        footer .mobile .logo > p {
+          display: none; } }
+    @media screen and (max-width: 600px) {
+      footer .mobile {
+        visibility: show;
+        height: 50px;
+        margin-bottom: 0px;
+        z-index: 10;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: flex-row;
+        -ms-flex-direction: flex-row;
+        flex-direction: flex-row;
+        -webkit-box-align: flex-j-between;
+        -webkit-align-items: flex-j-between;
+        -ms-flex-align: flex-j-between;
+        align-items: flex-j-between; } }
+  footer .desktop {
+    display: none; }
+    @media screen and (min-width: 600px) {
+      footer .desktop {
+        visibility: show;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: 350px;
+        padding-bottom: 20px; }
+        footer .desktop .left-box,
+        footer .desktop .right-box {
+          width: 45%; } }
+    footer .desktop .right-box a {
+      color: #abb7b7;
+      font-size: 1.1em; }
+    footer .desktop a:hover {
+      color: #f1a9a0; }
+    footer .desktop .social-icons {
+      font-size: 1.8em; }
+      footer .desktop .social-icons a {
+        padding: 20px;
+        color: #abb7b7; }
+      footer .desktop .social-icons a:hover {
+        color: #f1a9a0; }
+  footer #mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 10px 'Open Sans', Helvetica , Arial, sans-serif;
+    color: black; }
+    footer #mc_embed_signup h2 {
+      color: #abb7b7;
+      font-size: 1.5em; }
+  footer .mc-field-group label {
+    font-size: 12px; }
+  footer .mc-field-group input[type="email"] {
+    border: 1px solid #d2d7d3;
+    border-radius: 2px; }
+  footer #mc_embed_signup input {
+    border: 1px solid #d2d7d3; }
+  footer .response #mc_success_response {
+    color: blue; }
 
 /*----------------------------------- Flexbox ---------------------------------------*/
 .flex {

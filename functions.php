@@ -12,7 +12,9 @@ function register_my_menus() {
 	  'side-menu' => __( 'Side Menu' ),
 	  'user-menu' => __( 'User Menu' ),
 	  'header-user-menu' => __( 'Header User Menu' ),
-	  'logged-in-user' => __( 'Logged In User' )
+	  'logged-in-user' => __( 'Logged In User' ),
+	  'logged-in-pages' => __( 'Logged In Pages' ),
+	  'logged-out-pages' => __( 'Logged Out Pages' )
 	)
   );
 }
@@ -31,6 +33,15 @@ if(!is_admin()){
 		false,
 		true
 	);
+
+	# MailChimp newletter sign up
+	wp_register_script('mailChimp', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js',
+		false,
+		false,
+		true
+	);
+
+	wp_enqueue_script('mailChimp');
 
 	# FancyBox JS
 	wp_register_script('mousewheel', $dir.'/includes/fancybox/lib/jquery.mousewheel-3.0.6.pack.js', ['jquery'], false, true);
@@ -69,6 +80,9 @@ if(!is_admin()){
 
 	# Bootstrap
 	wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
+
+	#
+	wp_enqueue_style('mailchimp', '//cdn-images.mailchimp.com/embedcode/classic-081711.css');
 
 	# Tabs styles
 	wp_enqueue_style('tabs-theme', $dir.'/css/easy-responsive-tabs.css');
@@ -130,7 +144,7 @@ if(!is_admin()){
 
 	function beauty_template_redirect () {
 		if ( is_page( 'login' ) && is_user_logged_in() ) {
-			wp_redirect( home_url( '/user/' ) );
+			wp_redirect( home_url( '/user/' )  );
 			exit();
 		}
 
@@ -140,6 +154,7 @@ if(!is_admin()){
 		}
 		if ( is_page( 'book-online' ) && !is_user_logged_in() ) {
 			wp_redirect( home_url( '/sign-in/' ) );
+
 			exit();
 		}
 	}
@@ -208,6 +223,8 @@ if(!is_admin()){
 	} 
 	add_filter( 'app_footer_scripts', 'app_redirect' );
 
+
+	# Change logo and styles for login page when errors occur
 	function my_login_logo() { ?>
 	    <style type="text/css">
 	        body.login div#login h1 a {

@@ -10,7 +10,11 @@
 
 	<div class="pusher">
 		<div id="sidemenu">
-			<?php wp_nav_menu( array( 'theme_location' => 'side-menu' ) ); ?>
+			<?php if(is_user_logged_in()): ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'logged-in-pages' ) ); ?>
+			<?php else: ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'side-menu' ) ); ?>
+			<?php endif; ?>
 		</div>
 		
 		<div id="topmenu">
@@ -43,7 +47,7 @@
 					<?php else: ?>
 					<a href="<?php echo home_url('sign-in') ?>" id="left">Sign In</a>
 					<div id="registration">
-						<a href="<?php echo home_url('sign-up') ?>">Sign Up</a>
+						<a href="<?php echo home_url('sign-up') ?>" id="right">Sign Up</a>
 					</div>
 					<?php endif; ?>
 				</div>
