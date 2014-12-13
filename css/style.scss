@@ -411,6 +411,13 @@ a:hover{
 	}
 }
 
+li.current-menu-item a{
+
+	border-bottom: 2px solid $pink;
+
+
+}
+
 .login-menu{
 	display: flex;
 	justify-content: space-around;
@@ -452,6 +459,10 @@ a:hover{
 
 	@media screen and (max-width: 600px){
 		display: none;
+	}
+
+	input[type="name"]{
+		placeholder: "test";
 	}
 }
 
@@ -1106,9 +1117,34 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 	h3{
 		font-weight: bold;
-		font-size: 1.1em;
+		font-size: 1.6em;
+		margin-bottom: 0px;
+		color: $pink;
+
+		@media screen and (max-width: 600px){
+			font-size: 1.4em;
+		}
 	}
+
 }
+
+
+.book-link{
+
+	a{
+		color: $background-color;
+		font-size: 1.5em;
+		background-color: $pink;
+		padding: 0 5px 0 5px;
+		border-radius: 5px;
+	}
+	
+}
+
+
+
+	
+
 
 #back-arrow{
 	color: $grey;
@@ -1153,6 +1189,7 @@ input[type="password"]{
 	padding: 5px;
 	font-size: 12px;
 	font-family: 'Andale Mono';
+	width: 200px;
 }
 
 label{
@@ -1167,6 +1204,11 @@ input[type="submit"]{
 	background-color: $background-color;
 	color: white;
 	font-family: 'Open Sans';
+}
+
+.login-error{
+	color: tomato;
+	font-size: 1.1em;
 }
 
 .login h1 a {
@@ -1193,10 +1235,18 @@ input[type="submit"]{
 /*------------------------------------ Footer -----------------------------*/
 footer{
 	background-color: white;
-	padding-bottom: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	
 
 	.mobile{
-		display: none;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0px; 
+
+		@media screen and (min-width: 600px){
+			display: none;
+		}
 
 		.footer-pic{
 
@@ -1244,9 +1294,8 @@ footer{
 			display: flex;
 			flex-direction: row;
 			height: 350px;
-			padding-bottom: 20px;
 			
-
+			
 			.left-box,
 			.right-box{
 				width: 45%;
@@ -1278,6 +1327,41 @@ footer{
 			}
 		}
 
+		.phone{
+			color: $grey;
+			font-size: 3em;
+
+			span{
+				margin-top: 10px;
+				padding-top: 20px;
+				padding-right: 5px;
+			}
+		}
+
+	}
+
+	.copy{
+
+		span{
+			color: $pink;
+			font-size: 1.3em;
+	
+			@media screen and (max-width: 600px){
+				display: none;		
+			}
+		}
+
+		p{
+			padding: 0px;
+			margin: 0px;
+			color: $grey;
+	
+			@media screen and (min-width: 600px){
+				padding-left: 5px;
+				padding-right: 5px;
+
+			}
+		}
 	}
 
 	// Newsletter sign up
@@ -1293,7 +1377,6 @@ footer{
 			font-size: 1.5em;
 		} 
 	}
-
 
 	.mc-field-group{
 
@@ -1318,6 +1401,12 @@ footer{
 	.response #mc_success_response{
 		color: blue;
 	}
+}
+
+.userdetails{
+	padding-top: 50px;
+	position: absolute;
+	margin-left: 600px;
 }
 
 

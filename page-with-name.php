@@ -1,6 +1,16 @@
 <?php /* Template Name: Page with Name */ ?>
 
 <?php get_header(); ?>
+	<!--<div class="face-pic">
+		<div id="slider1_container">
+	        <!-- Slides Container -->
+	        <!--<div u="slides" style="position: fixed; left: 0px; top: 0px; width: 1100px; height: 550px;
+	            overflow: hidden;">
+	            <div><img u="image" src="wp-content/themes/my-theme/css/img/beauty-large.png" /></div>
+	            <div><img u="image" src="wp-content/themes/my-theme/css/img/beauty-therapy.jpg" /></div>
+	        </div>
+	    </div>
+	</div> <!-- Jssor Slider End -->
 	<div class="face-pic">
 		<img src="wp-content/themes/my-theme/css/img/beauty-large.png" alt="">
 	</div>

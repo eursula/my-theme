@@ -30,7 +30,8 @@
 			?>
 
 			<div class="container services-content flex flex-column">
-				<a href="<?php echo home_url('book-online') ?>">Book Now</a>
+				<div class="book-link"><a href="<?php echo home_url('book-online') ?>">Book Now</a>
+				</div>
 				<?php echo the_content(); ?>
 
 

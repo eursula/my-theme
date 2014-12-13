@@ -35,6 +35,10 @@
 					    	</div>
 					    </div>
 					</form>
+					<div class="phone flex flex-row flex-j-center">
+						<span data-icon="&#xe03c;"></span>
+						<p>09 233 2347</p>
+					</div>
 				</div><!--End mc_embed_signup-->
 			</div>
 			<div class="right-box">
@@ -51,8 +55,11 @@
 				<?php endif; ?>
 			</div>
 		</div>
-		<div class="copy">
-			
+		
+		<div class="copy flex flex-row flex-j-center flex-j-space">
+			<p>&copy; Beauty Boutique 2014</p>
+			<span data-icon="&#xe00a;"></span>
+			<p>Website Design by Eursula Hicks</p>
 		</div>
 	</footer>
 	</div><!-- end of .pusher -->

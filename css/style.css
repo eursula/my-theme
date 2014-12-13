@@ -493,6 +493,9 @@ a:hover {
   #usermenu a.logout {
     position: relative; }
 
+li.current-menu-item a {
+  border-bottom: 2px solid #f1a9a0; }
+
 .login-menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -516,6 +519,8 @@ a:hover {
   @media screen and (max-width: 600px) {
     .login-menu {
       display: none; } }
+  .login-menu input[type="name"] {
+    placeholder: "test"; }
 
 #sidemenu {
   position: absolute;
@@ -1029,7 +1034,19 @@ See separate stylesheet: 'easy-responsive-tabs.css'
         font-size: 1.1em; } }
   .services-content h3 {
     font-weight: bold;
-    font-size: 1.1em; }
+    font-size: 1.6em;
+    margin-bottom: 0px;
+    color: #f1a9a0; }
+    @media screen and (max-width: 600px) {
+      .services-content h3 {
+        font-size: 1.4em; } }
+
+.book-link a {
+  color: #000f16;
+  font-size: 1.5em;
+  background-color: #f1a9a0;
+  padding: 0 5px 0 5px;
+  border-radius: 5px; }
 
 #back-arrow {
   color: #abb7b7;
@@ -1061,7 +1078,8 @@ input[type="text"],
 input[type="password"] {
   padding: 5px;
   font-size: 12px;
-  font-family: 'Andale Mono'; }
+  font-family: 'Andale Mono';
+  width: 200px; }
 
 label {
   margin-right: 10px;
@@ -1074,6 +1092,10 @@ input[type="submit"] {
   background-color: #000f16;
   color: white;
   font-family: 'Open Sans'; }
+
+.login-error {
+  color: tomato;
+  font-size: 1.1em; }
 
 .login h1 a {
   background-image: url("../images/w-logo-blue.png?ver=20131202");
@@ -1099,9 +1121,21 @@ input[type="submit"] {
 /*------------------------------------ Footer -----------------------------*/
 footer {
   background-color: white;
-  padding-bottom: 20px; }
+  margin-bottom: 0px;
+  margin-top: 0px; }
   footer .mobile {
-    display: none; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 0px; }
+    @media screen and (min-width: 600px) {
+      footer .mobile {
+        display: none; } }
     @media screen and (max-width: 600px) {
       footer .mobile .footer-pic {
         background-image: url("img/logo-gold.png");
@@ -1154,8 +1188,7 @@ footer {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
-        height: 350px;
-        padding-bottom: 20px; }
+        height: 350px; }
         footer .desktop .left-box,
         footer .desktop .right-box {
           width: 45%; } }
@@ -1171,6 +1204,27 @@ footer {
         color: #abb7b7; }
       footer .desktop .social-icons a:hover {
         color: #f1a9a0; }
+    footer .desktop .phone {
+      color: #abb7b7;
+      font-size: 3em; }
+      footer .desktop .phone span {
+        margin-top: 10px;
+        padding-top: 20px;
+        padding-right: 5px; }
+  footer .copy span {
+    color: #f1a9a0;
+    font-size: 1.3em; }
+    @media screen and (max-width: 600px) {
+      footer .copy span {
+        display: none; } }
+  footer .copy p {
+    padding: 0px;
+    margin: 0px;
+    color: #abb7b7; }
+    @media screen and (min-width: 600px) {
+      footer .copy p {
+        padding-left: 5px;
+        padding-right: 5px; } }
   footer #mc_embed_signup {
     background: #fff;
     clear: left;
@@ -1188,6 +1242,11 @@ footer {
     border: 1px solid #d2d7d3; }
   footer .response #mc_success_response {
     color: blue; }
+
+.userdetails {
+  padding-top: 50px;
+  position: absolute;
+  margin-left: 600px; }
 
 /*----------------------------------- Flexbox ---------------------------------------*/
 .flex {
