@@ -7,21 +7,21 @@ $dir = get_template_directory_uri();
 function register_my_menus() {
   register_nav_menus(
 	array(
-	  'header-menu' => __( 'Main nav bar' ),
-	  'top-menu' => __( 'Top Menu' ),
-	  'side-menu' => __( 'Side Menu' ),
-	  'user-menu' => __( 'User Menu' ),
+	  'header-menu'      => __( 'Main nav bar' ),
+	  'top-menu'         => __( 'Top Menu' ),
+	  'side-menu'        => __( 'Side Menu' ),
+	  'user-menu'        => __( 'User Menu' ),
 	  'header-user-menu' => __( 'Header User Menu' ),
-	  'logged-in-user' => __( 'Logged In User' ),
-	  'logged-in-pages' => __( 'Logged In Pages' ),
-	  'logged-out-pages' => __( 'Logged Out Pages' )
+	  'logged-in-user'   => __( 'Logged In User' ),
+	  'logged-in-pages'  => __( 'Logged In Pages' ),
+	  'logged-out-pages' => __( 'Logged Out Pages' ),
+	  'side-logged-in'   => __( 'Side Logged In' )
 	)
   );
 }
 
 add_action( 'init', 'register_my_menus' );
 
-//add_action('header_menu', 'register_my_custom_submenu_page');
 
 add_editor_style('editor-style.css');
 
@@ -42,21 +42,6 @@ if(!is_admin()){
 	);
 
 	wp_enqueue_script('mailChimp');
-
-	# FancyBox JS
-	wp_register_script('mousewheel', $dir.'/includes/fancybox/lib/jquery.mousewheel-3.0.6.pack.js', ['jquery'], false, true);
-
-	wp_register_script('fancybox', $dir.'/includes/fancybox/source/jquery.fancybox.pack.js', ['jquery', 'mousewheel'], false, true);
-
-	wp_enqueue_script('fancybox');
-
-	wp_register_style('fancy-style', 
-		$dir.'/includes/fancybox/source/jquery.fancybox.css',
-		array(),
-		'',
-		'screen');
-
-	wp_enqueue_style('fancy-style');
 
 
 	# Tabs scripts
@@ -146,9 +131,6 @@ if(!is_admin()){
 		) {
 			return;
 		}
-
-		//wp_redirect( home_url( '/login/' ) );
-		//exit;
 	}
 	add_action('login_init', 'beauty_login_init');
 

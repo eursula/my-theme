@@ -7,8 +7,6 @@
 		<div class="container">
 			<?php the_post(); ?>
 
-		   	
-			
 			<div class="cols flex flex-j-between flex-a-start">
 				<div class="main">
 					<?php echo the_content(); ?>

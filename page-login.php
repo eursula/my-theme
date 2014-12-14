@@ -4,10 +4,6 @@
 	
 	<div id="main">
 		<div class="container-pic">
-			<!--<div class="userdetails flex flex-column flex-j-center">
-				<p>Username: test</p>
-				<p>Password: test123</p>
-			</div>-->
 			<div class="container login-form flex flex-column">
 				<?php if($_GET['login'] == 'failed'): ?>
 					<p class="login-error">Username or Password incorrect</p>
@@ -17,7 +13,7 @@
 				if ( ! is_user_logged_in() ) { // Display WordPress login form:
 
 					$args = [
-						'redirect' => home_url('user'),
+						'redirect' => home_url(),
 						'form_id'  => 'loginform-custom',
 						'label_username' => __( 'Username' ),
 				        'label_password' => __( 'Password' ),

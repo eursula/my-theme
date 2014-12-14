@@ -348,7 +348,7 @@ header .container:after {
   .container-white .content {
     color: #f1a9a0; }
 
-/* Navigation */
+/*------------------------------ Navigation ----------------------*/
 ul {
   text-decoration: none;
   list-style: none;
@@ -379,7 +379,7 @@ ul {
     width: 150px; }
 
 @media screen and (max-width: 600px) {
-  a .header-logo {
+  .header-logo {
     display: none; } }
 
 .header-logo {
@@ -519,8 +519,6 @@ li.current-menu-item a {
   @media screen and (max-width: 600px) {
     .login-menu {
       display: none; } }
-  .login-menu input[type="name"] {
-    placeholder: "test"; }
 
 #sidemenu {
   position: absolute;
@@ -544,7 +542,7 @@ li.current-menu-item a {
       line-height: 2;
       font-size: 1.1em; }
   #sidemenu a {
-    color: #b2854c; }
+    color: #000f16; }
   #sidemenu a:hover {
     color: #000f16; }
   #sidemenu p {
@@ -1095,7 +1093,8 @@ input[type="submit"] {
 
 .login-error {
   color: tomato;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  text-align: center; }
 
 .login h1 a {
   background-image: url("../images/w-logo-blue.png?ver=20131202");
@@ -1122,7 +1121,8 @@ input[type="submit"] {
 footer {
   background-color: white;
   margin-bottom: 0px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  /*------------------------ Newsletter sign up---------------*/ }
   footer .mobile {
     display: -webkit-box;
     display: -webkit-flex;

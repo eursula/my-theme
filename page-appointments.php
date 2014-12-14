@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Appointments+ Page
+Template Name: Appontments+ Page
 */
 
 /*

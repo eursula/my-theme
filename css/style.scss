@@ -21,8 +21,6 @@ body{
 	transition: padding-top 0.4s ease;
 	overflow-y: scroll;
 	overflow-x: hidden;
-
-
 }
 
 header{
@@ -52,9 +50,7 @@ header .container{
 	and (max-device-width : 1024px) 
 	and (orientation : landscape) {
 		padding-right: 30px;
-
 	}
-
 
 	.icon-button{
 		background-image: url("img/B.png") ;
@@ -110,21 +106,16 @@ header .container:after{ content: normal; }
 
 .container .main-menu{
 
-	
-
-
 	@media screen and (max-width: 600px){
 		display: none;
 	}
 
 	@media screen and (min-width: 600px){
 		display: none;
-		//width: 800px;
 		display: flex;
 		justify-content: space-between;
 
 		ul li{
-
 			display: inline-block;
 			margin-bottom: 0;
 			padding-bottom: 0;
@@ -134,12 +125,9 @@ header .container:after{ content: normal; }
 			margin-bottom: 0;
 			border-color: black transparent;
 
-
-
 			li:hover{
 				background-color: $pink;
 				color: white;
-
 			}
 		}
 
@@ -162,17 +150,12 @@ header .container:after{ content: normal; }
 			@media screen and (max-width: 600px){
 				height: 300px;
 			}
-			//border-width: 0px 20px 20px 20px;
-			//height: 0px;
-			//width: 0px;
-
 		}
+
 		.sub-menu li{
 			display: block;
 			padding: 5px 10px 5px 10px;
 
-
-			
 			@media screen and (min-width: 600px){
 				a:hover{
 					border-bottom: none;
@@ -202,7 +185,6 @@ header .container:after{ content: normal; }
 
 .container-white{
 	background-color: $white-grey;
-	//border-bottom: 1px dotted $grey;
 
 	h2{
 		color: $grey;
@@ -214,7 +196,7 @@ header .container:after{ content: normal; }
 	}
 }
 
-/* Navigation */
+/*------------------------------ Navigation ----------------------*/
 
 ul{
 	text-decoration: none;
@@ -227,14 +209,12 @@ ul{
 		line-height: 2;
 		color: $gold;
 		margin-bottom: 0;
-
 	}
 
 	a{
 		text-decoration: none;
 		list-style: none;
-		text-align: center;
-		
+		text-align: center;		
 	}
 
 	ul{
@@ -247,7 +227,6 @@ ul{
 		@media screen and (min-width: 600px){
 			display: none;
 		}
-
 	}
 
 	li:hover ul{
@@ -262,7 +241,7 @@ ul{
 	}
 }
 
-a .header-logo{
+.header-logo{
 
 	@media screen and (max-width: 600px){
 		display: none;
@@ -283,8 +262,7 @@ a .header-logo{
 
 		a:hover{
 			text-decoration: none;
-		}
-			
+		}		
 	}
 
 	#logo2{
@@ -298,9 +276,7 @@ a .header-logo{
 
 		a:hover{
 			text-decoration: none;
-		}
-		
-
+		}	
 	}
 
 	.main-pic{
@@ -316,6 +292,7 @@ a .header-logo{
 			margin-top: -10px;
 		}
 	}
+
 	@media screen and (max-width: 600px){
 		display: none;
 	}
@@ -374,7 +351,6 @@ a:hover{
 	background: $pink;
 	text-align: center;
 
-	
 	ul{
 		text-decoration: none;
 		list-style: none;
@@ -405,17 +381,12 @@ a:hover{
 	}
 
 	a.logout{
-		
 		position: relative;
-
 	}
 }
 
 li.current-menu-item a{
-
 	border-bottom: 2px solid $pink;
-
-
 }
 
 .login-menu{
@@ -424,7 +395,6 @@ li.current-menu-item a{
 	margin-left: 20px;
 	margin-right: 30px;
 	width: 110px;
-	//background-color: $gold;
 
 	@media only screen 
 	and (min-device-width : 768px) 
@@ -432,7 +402,6 @@ li.current-menu-item a{
 	and (orientation : landscape) {
 		padding: 5px;
 		width: 180px;
-
 	}
 
 
@@ -440,17 +409,6 @@ li.current-menu-item a{
 		padding-right: 15px;
 		border-right: 1px solid white;
 	}
-
-	#right{
-			@media only screen 
-		and (min-device-width : 768px) 
-		and (max-device-width : 1024px) 
-		and (orientation : landscape) {
-			//padding-left: 5px;
-
-		}
-	}
-
 
 	a{
 		//padding: 10px;
@@ -460,14 +418,7 @@ li.current-menu-item a{
 	@media screen and (max-width: 600px){
 		display: none;
 	}
-
-	input[type="name"]{
-		placeholder: "test";
-	}
 }
-
-
-
 
 #sidemenu{
 	$width: 200px;
@@ -480,28 +431,23 @@ li.current-menu-item a{
 	text-align: center;
 	height: 100vh;
 
-
 	ul{
 		text-decoration: none;
 		list-style: none;
 		margin-left: 0;
 		padding-left: 0;
 
-
-
 		li{
 			border-bottom: 1px dotted white;
 			text-align: left;
 			padding-left: 1.5em;
 			line-height: 2;
-			font-size: 1.1em;
-			
+			font-size: 1.1em;		
 		}
-
 	}
 
 	a{
-		color: $gold;
+		color: $background-color;
 	}
 
 	a:hover{
@@ -525,7 +471,6 @@ li.current-menu-item a{
 	State of the page with the activated topmenu	
 */
 
-
 body.show_topmenu{
 	padding-top: 295px;
 }
@@ -539,9 +484,7 @@ body.show_usermenu .pusher{
 }
 
 body.show_sidemenu .pusher{
-	// margin-left: 150px;
 	transform: translate3d(200px,0,0);
-
 }
 /*--------------------------- Page with name ---------------------------------------*/
 
@@ -549,7 +492,6 @@ body.show_sidemenu .pusher{
 	display: flex;
 	flex-direction: column;
 	margin-top: 80px;
-	//min-height: 500px;  /* Remove this once content in page */
 	text-align: center;
 
 	@media screen and (min-width: 600px){
@@ -597,7 +539,6 @@ body.show_sidemenu .pusher{
 		height: 40px;
 		width: 40px;
 		-webkit-transform: scale(0.8);
-
 	}
 }
 
@@ -626,7 +567,6 @@ body.show_sidemenu .pusher{
 	
 	@media screen and (min-width: 600px){
 		top: 630px;
-		//height: 1500px; /* Demo purposes */
 	}
 }
 
@@ -634,14 +574,10 @@ body.show_sidemenu .pusher{
 	margin-bottom: 50px;
 }
 
-
-
-
 .promotion-box{
 	
 	margin: 10px;
 	margin-bottom: 50px;
-	//background-color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center; 
@@ -653,7 +589,6 @@ body.show_sidemenu .pusher{
 	 #wpcf-field-promotion_box,
 	 #wpcf-field-promotion_box-2{
 	 	border: 2px solid white;
-	 	//height: 200px;
 	 	font-size: 2em;
 	 	padding: 20px;
 	 	margin-bottom: 20px;
@@ -679,7 +614,6 @@ body.show_sidemenu .pusher{
 	img{
 		width: 20px;
 		height: 20px;
-
 	}
 
 
@@ -689,9 +623,7 @@ body.show_sidemenu .pusher{
 		font-size: 2.3em;
 		text-align: justify;
 		padding: 10px;
-		
 	}
-
 }
 
 .row{
@@ -701,9 +633,7 @@ body.show_sidemenu .pusher{
 
 /*-------------------------- Page Two Columns ---------------------------------*/
 .cols{
-	//background-color: white;
 	flex-direction: row;
-
 	
 	@media screen and (max-width: 600px){
 		width: 100%;
@@ -726,18 +656,14 @@ body.show_sidemenu .pusher{
 		letter-spacing: 2px;
 
 		@media screen and (min-width: 600px){
-			
-			//-webkit-font-smoothing: antialiased;
 			line-height: 2;
 			font-size: 1.3em;
-			text-align: justify;
-			
+			text-align: justify;	
 		}
 	}
 
 	h2{
 		color: $gold;
-
 	}
 
 	h3{
@@ -764,7 +690,6 @@ h2{
 		font-size: 1.5em;
 		padding-left: 10px;
 	}
-
 }
 
 .page-title{
@@ -778,10 +703,8 @@ h2{
 }
 
 .flex-row{
-	//@media screen and (max-width: 600px){
 	flex-wrap: wrap;
 	flex-grow: 1;
-	//}
 }
 
 .tr-name{
@@ -799,7 +722,6 @@ h2{
 
 	z-index: 2;
 	font-size: 3em;
-
 }
 
 .tr-image{
@@ -817,7 +739,6 @@ h2{
 
 	#image-w{
 		max-width: 450px;
-
 	}
 
 	a{
@@ -835,7 +756,6 @@ h2{
 	        rgba(1, 0, 0, 0.6), 
       		rgba(1, 0, 0, 0.6)
 	    );
-		//filter:alpha(opacity=90);
 	}
 }
 /*------------------------------------------- Page w Banner -------------------------------------------*/
@@ -854,7 +774,6 @@ h2{
 }
 
 .banner{
-	//margin-top: 10px;
 
 	img{
 		width: 100%;
@@ -884,8 +803,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 /*------------------------------------ Booking Form -----------------------------*/
 
-
-//.birs_form_field.birs_appointment_location { display: none; }
 
 #booking-form{
 	background-color: $white-grey;;
@@ -934,7 +851,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 #primary{
 	color: #ddd;
-
 }
 
 /*------------------------------------ Register Form -----------------------------*/
@@ -946,14 +862,10 @@ See separate stylesheet: 'easy-responsive-tabs.css'
       rgba(0, 15, 22, 0.5)
     ),
     url("img/stone-spa.jpg" );
-	//background-image: url("img/purple-flower.jpg" no-repeat),
 	;
 	background-size: 100%;
-	//background-color: $grey;
 	min-height: 600px;
     overflow: hidden;
-    //position: fixed;
-
 }
 
 .container.register{
@@ -1017,7 +929,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 .account-form{
 	padding: 10px;
 	margin-top: 150px;
-	//background-color: rgba(255, 255, 255, 0.2);
 	background-color: $grey;
 	
 
@@ -1085,10 +996,8 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 
 .services-content{
 	background-color: white;
-	//margin-top: 20px;
 
 	padding: 20px;
-	
 
 	@media screen and (max-width: 600px){
 		padding: 10px;
@@ -1103,7 +1012,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 		}
 	}
 	
-
 	p{
 		font-size: 1.3em;
 		line-height: 2;
@@ -1112,7 +1020,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 		@media screen and (max-width: 600px){
 			font-size: 1.1em;
 		}
-
 	}
 
 	h3{
@@ -1125,7 +1032,6 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 			font-size: 1.4em;
 		}
 	}
-
 }
 
 
@@ -1137,20 +1043,13 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 		background-color: $pink;
 		padding: 0 5px 0 5px;
 		border-radius: 5px;
-	}
-	
+	}	
 }
-
-
-
-	
-
 
 #back-arrow{
 	color: $grey;
 	padding-bottom: 10px;
 	padding-left: 5px;
-
 }
 /*------------------------------------ Login Form -----------------------------*/
 
@@ -1161,16 +1060,12 @@ See separate stylesheet: 'easy-responsive-tabs.css'
       rgba(0, 15, 22, 0.5)
     ),
     url("img/purple-flower.jpg" );
-	//background-image: url("img/purple-flower.jpg" no-repeat),
-	;
 	background-size: 100%;
-	//background-color: $grey;
 	min-height: 600px;
     overflow: hidden;
-    //position: fixed;
 }
+
 .login-form{
-	//background-color: rgba(255, 255, 255, 0.6);
 	background-color: $white-grey;
 	margin-top: 20vh;
 	border-radius: 2px;
@@ -1209,6 +1104,7 @@ input[type="submit"]{
 .login-error{
 	color: tomato;
 	font-size: 1.1em;
+	text-align: center;
 }
 
 .login h1 a {
@@ -1238,7 +1134,6 @@ footer{
 	margin-bottom: 0px;
 	margin-top: 0px;
 	
-
 	.mobile{
 		display: flex;
 		justify-content: space-between;
@@ -1259,7 +1154,6 @@ footer{
 				margin: 5px 10px 0 10px;
 			}
 		}
-
 		
 		.logo>p{
 			font-family: 'Economica';
@@ -1281,8 +1175,7 @@ footer{
 			width: 100%;
 			display: flex; 
 			flex-direction: flex-row;
-			align-items: flex-j-between;
-			
+			align-items: flex-j-between;	
 		}
 	}
 
@@ -1295,7 +1188,6 @@ footer{
 			flex-direction: row;
 			height: 350px;
 			
-			
 			.left-box,
 			.right-box{
 				width: 45%;
@@ -1303,8 +1195,6 @@ footer{
 		}
 
 		.right-box a{
-
-			
 				color: $grey;
 				font-size: 1.1em;
 			}
@@ -1337,7 +1227,6 @@ footer{
 				padding-right: 5px;
 			}
 		}
-
 	}
 
 	.copy{
@@ -1364,7 +1253,7 @@ footer{
 		}
 	}
 
-	// Newsletter sign up
+/*------------------------ Newsletter sign up---------------*/
 
 	#mc_embed_signup{
 		background:#fff; 

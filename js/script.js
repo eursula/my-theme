@@ -8,6 +8,8 @@
             var jssor_slider1 = new $JssorSlider$("slider1_container", options);
         });*/
 
+/* function to toggle between icons on mobile device
+   to show different hidden menus*/
 jQuery(function(){
 
 	var $ = jQuery;
@@ -35,34 +37,25 @@ jQuery(function(){
 
     });
 
+	// script for responsive tabs 
 	$('.verticalTab').easyResponsiveTabs({
 		type: 'vertical',
 		width: 'auto',
 		fit: true
 	});
-
-	$(document).ready(function() {
-		$(".show").fancybox({
-			'titleShow'	 : 'false',
-			'transitionIn'	  : 'fade',
-			'transitionOut'	 : 'fade'
-		});
 	
-
-
+	// MailChimp script for newsletter subscription
 	(function($) {
 		window.fnames = new Array(); 
 		window.ftypes = new Array();
 		fnames[0]='EMAIL';
 		ftypes[0]='email';
-		fnames[1]='FNAME';
-		ftypes[1]='text';
 	}(jQuery));
 
 	var $mcj = jQuery.noConflict(true);
 
 
-});
+
 
 
 

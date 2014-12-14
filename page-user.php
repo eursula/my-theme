@@ -44,7 +44,6 @@
 	        //action hook for plugins and extra fields saving
 	        do_action('edit_user_profile_update', $current_user->ID);
 	        wp_redirect( get_permalink() );
-	        exit;
 	    }
 	}
 ?>
