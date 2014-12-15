@@ -22,6 +22,9 @@
 				<?php endif; ?>
 			</div>
 		</div>
+		<div class="map">
+			<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3195.255789037202!2d174.77246870000005!3d-36.78841709999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snz!4v1417834591136" width="100%" height="400" frameborder="0"></iframe>
+		</div>
 	</div>
 
 <?php get_footer() ?>

@@ -55,11 +55,11 @@ if(!is_admin()){
 	
 
 	# Slider Script
-	//wp_register_script('jssor', $dir.'/js/jssor.js', ['jquery'], false, true);
+	wp_register_script('jssor', $dir.'/js/jssor.js', ['jquery'], false, true);
 
-	//wp_register_script('slider-script', $dir.'/js/jssor.slider.js', ['jquery', 'jssor'], false, true);
+	wp_register_script('slider-script', $dir.'/js/jssor.slider.js', ['jquery', 'jssor'], false, true);
 
-	//wp_enqueue_script('slider-script');
+	wp_enqueue_script('slider-script');
 
 	# Theme script
 	wp_register_script('theme', $dir.'/js/script.js',

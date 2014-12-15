@@ -566,7 +566,7 @@ body.show_sidemenu .pusher{
 	background-color: rgba(0, 15, 22, 0.9);
 	
 	@media screen and (min-width: 600px){
-		top: 630px;
+		top: 650px;
 	}
 }
 
@@ -953,10 +953,26 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 /*-------------------------- Contact Page & Form -----------------------------*/
 
 #contact{
-	background-color: $grey;
+	background-color: $light-grey;
+
+	@media screen and (max-width: 600px){
+		padding: 10px;
+	}
 
 	h2{
-		padding-top: 20px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+
+		@media screen and (max-width: 600px){
+			padding-top: 80px;
+		}	
+	}
+
+	input[type="email"]{
+		font-family: 'Andale Mono';
+		padding: 5px;
+		font-size: 12px;
 	}
 
 	input[type="submit"]{
@@ -972,23 +988,48 @@ See separate stylesheet: 'easy-responsive-tabs.css'
 		border: none;
 		padding: 2px;
 		font-family: 'Andale Mono';
+		font-size: 12px;
 		width: 100%;
 	}
 }
 
-.div.wpcf7-mail-sent-ok{
-	border: 1px dotted $pink;
-
+.map{
+	padding-top: 80px;
 }
 
-.hours{
+.hours,
+.details{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	letter-spacing: 2px;
 	line-height: 2;
-	color: white;
+	color: $background-color;
+	font-size: 1.2em;
+}
+
+.details{
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: left;
+
+}
+
+.wpcf7-form{
+	p{
+		color: $background-color;
+	}
+}
+
+.wpcf7-validation-errors{
+	color: tomato;
+	border: 2px solid tomato;
+}
+
+.wpcf7-mail-sent-ok{
+	color: #03C9A9;
+
 }
 
 
